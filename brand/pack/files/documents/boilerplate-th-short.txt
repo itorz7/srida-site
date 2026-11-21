@@ -1,0 +1,1 @@
+Srida.ai (สีดา) ผู้นำด้าน Local AI ในประเทศไทย พัฒนาผลิตภัณฑ์ AI ครอบคลุม 5 ด้าน ได้แก่ Srida Khuet (LLM), Srida Yin (ASR), Srida Wao (TTS), Srida Khua (MT) และ Srida Berng (Vision)

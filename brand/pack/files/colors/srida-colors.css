@@ -1,0 +1,14 @@
+:root {
+  --srida-pink: #F0647E;  /* rgb(240 100 126) · hsl(349 82% 67%) · oklch(0.685 0.173 11.5) */
+  --srida-leaf: #3A9A40;  /* rgb(58 154 64) · hsl(124 45% 42%) · oklch(0.609 0.156 144.4) */
+  --srida-ink: #0B0B0C;  /* rgb(11 11 12) · hsl(240 4% 5%) · oklch(0.15 0.002 286.1) */
+  --srida-grey: #9A9AA0;  /* rgb(154 154 160) · hsl(240 3% 62%) · oklch(0.688 0.009 286.2) */
+  --srida-rind: #8CC63F;  /* rgb(140 198 63) · hsl(86 54% 51%) · oklch(0.76 0.174 129.8) */
+  --srida-seed: #FFE9C7;  /* rgb(255 233 199) · hsl(36 100% 89%) · oklch(0.943 0.05 78.7) */
+  --srida-cream: #FFF6E9;  /* rgb(255 246 233) · hsl(35 100% 96%) · oklch(0.977 0.02 77.3) */
+  --srida-white: #FFFFFF;  /* rgb(255 255 255) · hsl(0 0% 100%) · oklch(1.0 0.0 0) */
+  --srida-pink-text: #C8355A;  /* rgb(200 53 90) · hsl(345 58% 50%) · oklch(0.561 0.183 10.9) */
+  --srida-grey-text: #6B6B72;  /* rgb(107 107 114) · hsl(240 3% 43%) · oklch(0.53 0.011 286.0) */
+  --srida-font-latin: 'Outfit', sans-serif;
+  --srida-font-thai: 'Prompt', sans-serif;
+}

@@ -1,0 +1,1950 @@
+{
+ "brand": "Srida.ai",
+ "tagline": "ผู้นำด้าน Local AI ในประเทศไทย",
+ "generated": "2026-11-21",
+ "contact_sheet": "contact-sheet.png",
+ "all_assets": {
+  "zip": "srida-brand-kit-1-of-3.zip",
+  "zip_bytes": 24941534,
+  "sha256": "66a9249e8f2ae00fe82447f3e68badb7b28ef32cb3bb8ce8be1bf58f3465fd76",
+  "total_bytes": 68044081,
+  "description_th": "ชุดแบรนด์รวมมี ZIP 3 ไฟล์ แตกทั้ง 3 ไฟล์ลงในโฟลเดอร์เดียวกันเพื่อรับไฟล์ครบทั้ง 11 ชุด",
+  "description_en": "The complete brand kit comes in 3 ZIP files. Extract all 3 into the same folder to get all 11 asset sets.",
+  "readme": "README.txt",
+  "parts": [
+   {
+    "zip": "srida-brand-kit-1-of-3.zip",
+    "zip_bytes": 24941534,
+    "sha256": "66a9249e8f2ae00fe82447f3e68badb7b28ef32cb3bb8ce8be1bf58f3465fd76",
+    "set_ids": [
+     "02-wordmark",
+     "05-app-icon",
+     "06-mascot",
+     "08-colors"
+    ]
+   },
+   {
+    "zip": "srida-brand-kit-2-of-3.zip",
+    "zip_bytes": 24751874,
+    "sha256": "f7f4fb282afbc8a13581da6f716ed202f39a91275b2e178b6b869d3e17f90774",
+    "set_ids": [
+     "03-lockup-thai",
+     "04-sub-brands",
+     "09-fonts",
+     "11-templates"
+    ]
+   },
+   {
+    "zip": "srida-brand-kit-3-of-3.zip",
+    "zip_bytes": 18350673,
+    "sha256": "b7228a49f8ce7f3d718f04904eed9f1d3508951f9f1e110ccf1b180813a09b49",
+    "set_ids": [
+     "01-logo-mark",
+     "07-social",
+     "10-documents"
+    ]
+   }
+  ]
+ },
+ "sets": [
+  {
+   "id": "01-logo-mark",
+   "slug": "logo-mark",
+   "name_th": "ไอคอนฝรั่ง (Logo mark)",
+   "name_en": "Logo mark (guava icon)",
+   "description_th": "ไอคอนฝรั่งผ่าซีก ใช้เมื่อพื้นที่จำกัดหรือต้องการเฉพาะสัญลักษณ์ (avatar, favicon, งานปั๊ม)",
+   "description_en": "The halved guava icon for tight spaces: avatars, favicons, stamps.",
+   "usage_th": "Logo mark — ไอคอนฝรั่ง\nแต่ละแบบมี SVG, PDF (เวกเตอร์สำหรับพิมพ์), PNG พื้นหลังโปร่งใส ขนาด 512/1024/2048 px\n- srida-mark-color: สี ใช้ตั้งแต่ 48 px ขึ้นไป (มีเมล็ดและเส้นใบ)\n- srida-mark-color-small: ใช้ 16–32 px (ตัดเมล็ด เปลือกและก้านหนาขึ้น)\n- srida-mark-black / -white: สีเดียว สำหรับพิมพ์สีเดียว แกะสลัก ปั๊ม หรือวางบนพื้นเข้ม\nเว้นที่ว่างรอบโลโก้อย่างน้อยเท่าความสูงของตัว s · ห้ามยืด หมุน เปลี่ยนสี หรือใส่เงา\nไฟล์ -white และ -on-dark ใน PDF มีพื้นหมึก (#0B0B0C) รองไว้ เพราะ PDF ไม่มีพื้นโปร่งใสให้เห็นตัวอักษรขาว · PNG ทุกไฟล์พื้นโปร่งใส · SVG ตัวอักษรเป็นเส้น (outline) เปิดได้โดยไม่ต้องมีฟอนต์",
+   "zip": "srida-logo-mark.zip",
+   "zip_bytes": 700309,
+   "sha256": "2a8c2ff955673c8aa4a05e50e5b15e41b0ca2eb0669e12275b2ae2f38e7e8f74",
+   "preview": "previews/01-logo-mark.png",
+   "file_count": 21,
+   "files": [
+    {
+     "path": "README.txt",
+     "bytes": 1655
+    },
+    {
+     "path": "pdf/srida-mark-black.pdf",
+     "bytes": 13908
+    },
+    {
+     "path": "pdf/srida-mark-color-small.pdf",
+     "bytes": 7127
+    },
+    {
+     "path": "pdf/srida-mark-color.pdf",
+     "bytes": 16301
+    },
+    {
+     "path": "pdf/srida-mark-white.pdf",
+     "bytes": 13944
+    },
+    {
+     "path": "png/srida-mark-black-1024.png",
+     "bytes": 56589,
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "png/srida-mark-black-2048.png",
+     "bytes": 124742,
+     "width": 2048,
+     "height": 2048
+    },
+    {
+     "path": "png/srida-mark-black-512.png",
+     "bytes": 26237,
+     "width": 512,
+     "height": 512
+    },
+    {
+     "path": "png/srida-mark-color-1024.png",
+     "bytes": 54709,
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "png/srida-mark-color-2048.png",
+     "bytes": 118786,
+     "width": 2048,
+     "height": 2048
+    },
+    {
+     "path": "png/srida-mark-color-512.png",
+     "bytes": 25618,
+     "width": 512,
+     "height": 512
+    },
+    {
+     "path": "png/srida-mark-color-small-1024.png",
+     "bytes": 38544,
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "png/srida-mark-color-small-2048.png",
+     "bytes": 85379,
+     "width": 2048,
+     "height": 2048
+    },
+    {
+     "path": "png/srida-mark-color-small-512.png",
+     "bytes": 17885,
+     "width": 512,
+     "height": 512
+    },
+    {
+     "path": "png/srida-mark-white-1024.png",
+     "bytes": 45027,
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "png/srida-mark-white-2048.png",
+     "bytes": 99661,
+     "width": 2048,
+     "height": 2048
+    },
+    {
+     "path": "png/srida-mark-white-512.png",
+     "bytes": 20780,
+     "width": 512,
+     "height": 512
+    },
+    {
+     "path": "svg/srida-mark-black.svg",
+     "bytes": 1651
+    },
+    {
+     "path": "svg/srida-mark-color-small.svg",
+     "bytes": 623
+    },
+    {
+     "path": "svg/srida-mark-color.svg",
+     "bytes": 1577
+    },
+    {
+     "path": "svg/srida-mark-white.svg",
+     "bytes": 1651
+    }
+   ]
+  },
+  {
+   "id": "02-wordmark",
+   "slug": "wordmark",
+   "name_th": "Wordmark srida.ai",
+   "name_en": "Wordmark srida.ai",
+   "description_th": "โลโก้หลัก srida.ai (จุดตัว i เป็นฝรั่ง) 4 แบบสี",
+   "description_en": "The primary srida.ai wordmark (guava as the i-dot) in four colourways.",
+   "usage_th": "Wordmark srida.ai — โลโก้หลัก\n- color: บนพื้นขาวหรือสีอ่อน · on-dark: บนพื้นเข้ม · black: ดำล้วน · white: ขาวล้วนบนพื้นเข้ม\nกว้างไม่ต่ำกว่า 96 px ถ้าเล็กกว่านั้นให้ใช้ไอคอน · เว้นที่ว่างรอบโลโก้อย่างน้อยเท่าความสูงของตัว s\nไฟล์ -white และ -on-dark ใน PDF มีพื้นหมึก (#0B0B0C) รองไว้ เพราะ PDF ไม่มีพื้นโปร่งใสให้เห็นตัวอักษรขาว · PNG ทุกไฟล์พื้นโปร่งใส · SVG ตัวอักษรเป็นเส้น (outline) เปิดได้โดยไม่ต้องมีฟอนต์",
+   "zip": "srida-wordmark.zip",
+   "zip_bytes": 403214,
+   "sha256": "23fcbcd214bf24f4f51563feef07169f3a186a95a0c28f962a81a8b34ca21cff",
+   "preview": "previews/02-wordmark.png",
+   "file_count": 21,
+   "files": [
+    {
+     "path": "README.txt",
+     "bytes": 1213
+    },
+    {
+     "path": "pdf/srida-wordmark-black.pdf",
+     "bytes": 9773
+    },
+    {
+     "path": "pdf/srida-wordmark-color.pdf",
+     "bytes": 8926
+    },
+    {
+     "path": "pdf/srida-wordmark-on-dark.pdf",
+     "bytes": 8970
+    },
+    {
+     "path": "pdf/srida-wordmark-white.pdf",
+     "bytes": 9812
+    },
+    {
+     "path": "png/srida-wordmark-black-1024.png",
+     "bytes": 27484,
+     "width": 1024,
+     "height": 292
+    },
+    {
+     "path": "png/srida-wordmark-black-2048.png",
+     "bytes": 57981,
+     "width": 2048,
+     "height": 585
+    },
+    {
+     "path": "png/srida-wordmark-black-512.png",
+     "bytes": 13050,
+     "width": 512,
+     "height": 146
+    },
+    {
+     "path": "png/srida-wordmark-color-1024.png",
+     "bytes": 28183,
+     "width": 1024,
+     "height": 292
+    },
+    {
+     "path": "png/srida-wordmark-color-2048.png",
+     "bytes": 58729,
+     "width": 2048,
+     "height": 585
+    },
+    {
+     "path": "png/srida-wordmark-color-512.png",
+     "bytes": 13603,
+     "width": 512,
+     "height": 146
+    },
+    {
+     "path": "png/srida-wordmark-on-dark-1024.png",
+     "bytes": 25646,
+     "width": 1024,
+     "height": 292
+    },
+    {
+     "path": "png/srida-wordmark-on-dark-2048.png",
+     "bytes": 53142,
+     "width": 2048,
+     "height": 585
+    },
+    {
+     "path": "png/srida-wordmark-on-dark-512.png",
+     "bytes": 12378,
+     "width": 512,
+     "height": 146
+    },
+    {
+     "path": "png/srida-wordmark-white-1024.png",
+     "bytes": 21869,
+     "width": 1024,
+     "height": 292
+    },
+    {
+     "path": "png/srida-wordmark-white-2048.png",
+     "bytes": 45858,
+     "width": 2048,
+     "height": 585
+    },
+    {
+     "path": "png/srida-wordmark-white-512.png",
+     "bytes": 10394,
+     "width": 512,
+     "height": 146
+    },
+    {
+     "path": "svg/srida-wordmark-black.svg",
+     "bytes": 4389
+    },
+    {
+     "path": "svg/srida-wordmark-color.svg",
+     "bytes": 4338
+    },
+    {
+     "path": "svg/srida-wordmark-on-dark.svg",
+     "bytes": 4338
+    },
+    {
+     "path": "svg/srida-wordmark-white.svg",
+     "bytes": 4389
+    }
+   ]
+  },
+  {
+   "id": "03-lockup-thai",
+   "slug": "lockup-thai",
+   "name_th": "Lockup คู่ชื่อไทย \"สีดา\"",
+   "name_en": "Thai lockup \"สีดา\"",
+   "description_th": "โลโก้คู่ชื่อไทย \"สีดา\" แนวนอนและแนวตั้ง 4 แบบสี",
+   "description_en": "Logo paired with the Thai name สีดา, horizontal and stacked, four colourways.",
+   "usage_th": "Lockup คู่ชื่อไทย \"สีดา\"\n- horizontal (แนวนอน) ใช้บนหัวเว็บ หัวเอกสาร · stacked (แนวตั้ง) เหมาะสำหรับพื้นที่สี่เหลี่ยม\n- 4 แบบสี: color, on-dark, black, white\nตัวอักษรไทยคือ Prompt Bold (OFL) แปลงเป็นเส้นแล้ว\nไฟล์ -white และ -on-dark ใน PDF มีพื้นหมึก (#0B0B0C) รองไว้ เพราะ PDF ไม่มีพื้นโปร่งใสให้เห็นตัวอักษรขาว · PNG ทุกไฟล์พื้นโปร่งใส · SVG ตัวอักษรเป็นเส้น (outline) เปิดได้โดยไม่ต้องมีฟอนต์",
+   "zip": "srida-lockup-thai.zip",
+   "zip_bytes": 819526,
+   "sha256": "4a00f79b50f6edfc831ec24459be0461769660e53ee51fb6bf8871979f58c9cc",
+   "preview": "previews/03-lockup-thai.png",
+   "file_count": 41,
+   "files": [
+    {
+     "path": "README.txt",
+     "bytes": 1130
+    },
+    {
+     "path": "pdf/srida-lockup-thai-horizontal-black.pdf",
+     "bytes": 10591
+    },
+    {
+     "path": "pdf/srida-lockup-thai-horizontal-color.pdf",
+     "bytes": 10312
+    },
+    {
+     "path": "pdf/srida-lockup-thai-horizontal-on-dark.pdf",
+     "bytes": 10353
+    },
+    {
+     "path": "pdf/srida-lockup-thai-horizontal-white.pdf",
+     "bytes": 10625
+    },
+    {
+     "path": "pdf/srida-lockup-thai-stacked-black.pdf",
+     "bytes": 11061
+    },
+    {
+     "path": "pdf/srida-lockup-thai-stacked-color.pdf",
+     "bytes": 10208
+    },
+    {
+     "path": "pdf/srida-lockup-thai-stacked-on-dark.pdf",
+     "bytes": 10252
+    },
+    {
+     "path": "pdf/srida-lockup-thai-stacked-white.pdf",
+     "bytes": 11101
+    },
+    {
+     "path": "png/srida-lockup-thai-horizontal-black-1024.png",
+     "bytes": 22750,
+     "width": 1024,
+     "height": 182
+    },
+    {
+     "path": "png/srida-lockup-thai-horizontal-black-2048.png",
+     "bytes": 46962,
+     "width": 2048,
+     "height": 363
+    },
+    {
+     "path": "png/srida-lockup-thai-horizontal-black-512.png",
+     "bytes": 10706,
+     "width": 512,
+     "height": 91
+    },
+    {
+     "path": "png/srida-lockup-thai-horizontal-color-1024.png",
+     "bytes": 23315,
+     "width": 1024,
+     "height": 182
+    },
+    {
+     "path": "png/srida-lockup-thai-horizontal-color-2048.png",
+     "bytes": 47844,
+     "width": 2048,
+     "height": 363
+    },
+    {
+     "path": "png/srida-lockup-thai-horizontal-color-512.png",
+     "bytes": 11188,
+     "width": 512,
+     "height": 91
+    },
+    {
+     "path": "png/srida-lockup-thai-horizontal-on-dark-1024.png",
+     "bytes": 20447,
+     "width": 1024,
+     "height": 182
+    },
+    {
+     "path": "png/srida-lockup-thai-horizontal-on-dark-2048.png",
+     "bytes": 41884,
+     "width": 2048,
+     "height": 363
+    },
+    {
+     "path": "png/srida-lockup-thai-horizontal-on-dark-512.png",
+     "bytes": 9920,
+     "width": 512,
+     "height": 91
+    },
+    {
+     "path": "png/srida-lockup-thai-horizontal-white-1024.png",
+     "bytes": 17923,
+     "width": 1024,
+     "height": 182
+    },
+    {
+     "path": "png/srida-lockup-thai-horizontal-white-2048.png",
+     "bytes": 36932,
+     "width": 2048,
+     "height": 363
+    },
+    {
+     "path": "png/srida-lockup-thai-horizontal-white-512.png",
+     "bytes": 8545,
+     "width": 512,
+     "height": 91
+    },
+    {
+     "path": "png/srida-lockup-thai-stacked-black-1024.png",
+     "bytes": 33437,
+     "width": 1024,
+     "height": 463
+    },
+    {
+     "path": "png/srida-lockup-thai-stacked-black-2048.png",
+     "bytes": 70367,
+     "width": 2048,
+     "height": 925
+    },
+    {
+     "path": "png/srida-lockup-thai-stacked-black-512.png",
+     "bytes": 16125,
+     "width": 512,
+     "height": 231
+    },
+    {
+     "path": "png/srida-lockup-thai-stacked-color-1024.png",
+     "bytes": 34162,
+     "width": 1024,
+     "height": 463
+    },
+    {
+     "path": "png/srida-lockup-thai-stacked-color-2048.png",
+     "bytes": 71264,
+     "width": 2048,
+     "height": 925
+    },
+    {
+     "path": "png/srida-lockup-thai-stacked-color-512.png",
+     "bytes": 16568,
+     "width": 512,
+     "height": 231
+    },
+    {
+     "path": "png/srida-lockup-thai-stacked-on-dark-1024.png",
+     "bytes": 30444,
+     "width": 1024,
+     "height": 463
+    },
+    {
+     "path": "png/srida-lockup-thai-stacked-on-dark-2048.png",
+     "bytes": 63369,
+     "width": 2048,
+     "height": 925
+    },
+    {
+     "path": "png/srida-lockup-thai-stacked-on-dark-512.png",
+     "bytes": 14874,
+     "width": 512,
+     "height": 231
+    },
+    {
+     "path": "png/srida-lockup-thai-stacked-white-1024.png",
+     "bytes": 26575,
+     "width": 1024,
+     "height": 463
+    },
+    {
+     "path": "png/srida-lockup-thai-stacked-white-2048.png",
+     "bytes": 56073,
+     "width": 2048,
+     "height": 925
+    },
+    {
+     "path": "png/srida-lockup-thai-stacked-white-512.png",
+     "bytes": 12871,
+     "width": 512,
+     "height": 231
+    },
+    {
+     "path": "svg/srida-lockup-thai-horizontal-black.svg",
+     "bytes": 6039
+    },
+    {
+     "path": "svg/srida-lockup-thai-horizontal-color.svg",
+     "bytes": 5988
+    },
+    {
+     "path": "svg/srida-lockup-thai-horizontal-on-dark.svg",
+     "bytes": 5988
+    },
+    {
+     "path": "svg/srida-lockup-thai-horizontal-white.svg",
+     "bytes": 6039
+    },
+    {
+     "path": "svg/srida-lockup-thai-stacked-black.svg",
+     "bytes": 5779
+    },
+    {
+     "path": "svg/srida-lockup-thai-stacked-color.svg",
+     "bytes": 5728
+    },
+    {
+     "path": "svg/srida-lockup-thai-stacked-on-dark.svg",
+     "bytes": 5728
+    },
+    {
+     "path": "svg/srida-lockup-thai-stacked-white.svg",
+     "bytes": 5779
+    }
+   ]
+  },
+  {
+   "id": "04-sub-brands",
+   "slug": "sub-brands",
+   "name_th": "ผลิตภัณฑ์ 5 สาย (Sub-brand)",
+   "name_en": "Product sub-brands",
+   "description_th": "โลโก้ผลิตภัณฑ์ Srida Khuet / Yin / Wao / Khua / Berng พร้อมบักสีดาท่าประจำสินค้า",
+   "description_en": "Product lockups for Srida Khuet / Yin / Wao / Khua / Berng with each product's mascot pose.",
+   "usage_th": "ผลิตภัณฑ์ 5 สาย\nSrida Khuet — คึด (คิด) · LLM · ท่าบักสีดา: llm\nSrida Yin — ยิน (ได้ยิน) · ASR (ถอดเสียง) · ท่า: asr\nSrida Wao — เว้า (พูด) · TTS (สร้างเสียง) · ท่า: tts\nSrida Khua — ขัว (สะพาน) · MT (แปลภาษา) · ท่า: mt\nSrida Berng — เบิ่ง (ดู) · Vision · ท่า: vision\nโลโก้ผลิตภัณฑ์ใช้โครงเดียวกับ wordmark (Outfit) ชื่อสินค้าสีชมพู มีบรรทัดเล็กบอกคำอีสาน (คำไทยกลาง) และชนิดสินค้า · ในโฟลเดอร์ png/<สินค้า>/ มี mascot-<ท่า>-1024/2048.png ท่าประจำสินค้าด้วย\nไฟล์ -white และ -on-dark ใน PDF มีพื้นหมึก (#0B0B0C) รองไว้ เพราะ PDF ไม่มีพื้นโปร่งใสให้เห็นตัวอักษรขาว · PNG ทุกไฟล์พื้นโปร่งใส · SVG ตัวอักษรเป็นเส้น (outline) เปิดได้โดยไม่ต้องมีฟอนต์",
+   "zip": "srida-sub-brands.zip",
+   "zip_bytes": 16658434,
+   "sha256": "08cc1cf6318c1266da7de428eba75034a3a08082ff1383db738a5fd44e8a9b59",
+   "preview": "previews/04-sub-brands.png",
+   "file_count": 111,
+   "files": [
+    {
+     "path": "README.txt",
+     "bytes": 1731
+    },
+    {
+     "path": "pdf/berng/srida-berng-black.pdf",
+     "bytes": 13379
+    },
+    {
+     "path": "pdf/berng/srida-berng-color.pdf",
+     "bytes": 13100
+    },
+    {
+     "path": "pdf/berng/srida-berng-on-dark.pdf",
+     "bytes": 13140
+    },
+    {
+     "path": "pdf/berng/srida-berng-white.pdf",
+     "bytes": 13413
+    },
+    {
+     "path": "pdf/khua/srida-khua-black.pdf",
+     "bytes": 12344
+    },
+    {
+     "path": "pdf/khua/srida-khua-color.pdf",
+     "bytes": 11496
+    },
+    {
+     "path": "pdf/khua/srida-khua-on-dark.pdf",
+     "bytes": 11542
+    },
+    {
+     "path": "pdf/khua/srida-khua-white.pdf",
+     "bytes": 12383
+    },
+    {
+     "path": "pdf/khuet/srida-khuet-black.pdf",
+     "bytes": 12070
+    },
+    {
+     "path": "pdf/khuet/srida-khuet-color.pdf",
+     "bytes": 11228
+    },
+    {
+     "path": "pdf/khuet/srida-khuet-on-dark.pdf",
+     "bytes": 11268
+    },
+    {
+     "path": "pdf/khuet/srida-khuet-white.pdf",
+     "bytes": 12107
+    },
+    {
+     "path": "pdf/wao/srida-wao-black.pdf",
+     "bytes": 12242
+    },
+    {
+     "path": "pdf/wao/srida-wao-color.pdf",
+     "bytes": 11401
+    },
+    {
+     "path": "pdf/wao/srida-wao-on-dark.pdf",
+     "bytes": 11445
+    },
+    {
+     "path": "pdf/wao/srida-wao-white.pdf",
+     "bytes": 12281
+    },
+    {
+     "path": "pdf/yin/srida-yin-black.pdf",
+     "bytes": 12718
+    },
+    {
+     "path": "pdf/yin/srida-yin-color.pdf",
+     "bytes": 11865
+    },
+    {
+     "path": "pdf/yin/srida-yin-on-dark.pdf",
+     "bytes": 11907
+    },
+    {
+     "path": "pdf/yin/srida-yin-white.pdf",
+     "bytes": 12755
+    },
+    {
+     "path": "png/berng/mascot-vision-1024.png",
+     "bytes": 594650,
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "png/berng/mascot-vision-2048.png",
+     "bytes": 2180488,
+     "width": 2048,
+     "height": 2048
+    },
+    {
+     "path": "png/berng/srida-berng-black-1024.png",
+     "bytes": 34080,
+     "width": 1024,
+     "height": 318
+    },
+    {
+     "path": "png/berng/srida-berng-black-2048.png",
+     "bytes": 70975,
+     "width": 2048,
+     "height": 636
+    },
+    {
+     "path": "png/berng/srida-berng-black-512.png",
+     "bytes": 16060,
+     "width": 512,
+     "height": 159
+    },
+    {
+     "path": "png/berng/srida-berng-color-1024.png",
+     "bytes": 36034,
+     "width": 1024,
+     "height": 318
+    },
+    {
+     "path": "png/berng/srida-berng-color-2048.png",
+     "bytes": 74497,
+     "width": 2048,
+     "height": 636
+    },
+    {
+     "path": "png/berng/srida-berng-color-512.png",
+     "bytes": 17147,
+     "width": 512,
+     "height": 159
+    },
+    {
+     "path": "png/berng/srida-berng-on-dark-1024.png",
+     "bytes": 34422,
+     "width": 1024,
+     "height": 318
+    },
+    {
+     "path": "png/berng/srida-berng-on-dark-2048.png",
+     "bytes": 70748,
+     "width": 2048,
+     "height": 636
+    },
+    {
+     "path": "png/berng/srida-berng-on-dark-512.png",
+     "bytes": 16306,
+     "width": 512,
+     "height": 159
+    },
+    {
+     "path": "png/berng/srida-berng-white-1024.png",
+     "bytes": 27208,
+     "width": 1024,
+     "height": 318
+    },
+    {
+     "path": "png/berng/srida-berng-white-2048.png",
+     "bytes": 56213,
+     "width": 2048,
+     "height": 636
+    },
+    {
+     "path": "png/berng/srida-berng-white-512.png",
+     "bytes": 12813,
+     "width": 512,
+     "height": 159
+    },
+    {
+     "path": "png/khua/mascot-mt-1024.png",
+     "bytes": 642914,
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "png/khua/mascot-mt-2048.png",
+     "bytes": 2397589,
+     "width": 2048,
+     "height": 2048
+    },
+    {
+     "path": "png/khua/srida-khua-black-1024.png",
+     "bytes": 32050,
+     "width": 1024,
+     "height": 342
+    },
+    {
+     "path": "png/khua/srida-khua-black-2048.png",
+     "bytes": 67722,
+     "width": 2048,
+     "height": 685
+    },
+    {
+     "path": "png/khua/srida-khua-black-512.png",
+     "bytes": 15351,
+     "width": 512,
+     "height": 171
+    },
+    {
+     "path": "png/khua/srida-khua-color-1024.png",
+     "bytes": 33834,
+     "width": 1024,
+     "height": 342
+    },
+    {
+     "path": "png/khua/srida-khua-color-2048.png",
+     "bytes": 70661,
+     "width": 2048,
+     "height": 685
+    },
+    {
+     "path": "png/khua/srida-khua-color-512.png",
+     "bytes": 16446,
+     "width": 512,
+     "height": 171
+    },
+    {
+     "path": "png/khua/srida-khua-on-dark-1024.png",
+     "bytes": 31969,
+     "width": 1024,
+     "height": 342
+    },
+    {
+     "path": "png/khua/srida-khua-on-dark-2048.png",
+     "bytes": 66616,
+     "width": 2048,
+     "height": 685
+    },
+    {
+     "path": "png/khua/srida-khua-on-dark-512.png",
+     "bytes": 15593,
+     "width": 512,
+     "height": 171
+    },
+    {
+     "path": "png/khua/srida-khua-white-1024.png",
+     "bytes": 25682,
+     "width": 1024,
+     "height": 342
+    },
+    {
+     "path": "png/khua/srida-khua-white-2048.png",
+     "bytes": 54109,
+     "width": 2048,
+     "height": 685
+    },
+    {
+     "path": "png/khua/srida-khua-white-512.png",
+     "bytes": 12248,
+     "width": 512,
+     "height": 171
+    },
+    {
+     "path": "png/khuet/mascot-llm-1024.png",
+     "bytes": 595323,
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "png/khuet/mascot-llm-2048.png",
+     "bytes": 2221173,
+     "width": 2048,
+     "height": 2048
+    },
+    {
+     "path": "png/khuet/srida-khuet-black-1024.png",
+     "bytes": 30042,
+     "width": 1024,
+     "height": 317
+    },
+    {
+     "path": "png/khuet/srida-khuet-black-2048.png",
+     "bytes": 61185,
+     "width": 2048,
+     "height": 633
+    },
+    {
+     "path": "png/khuet/srida-khuet-black-512.png",
+     "bytes": 14149,
+     "width": 512,
+     "height": 158
+    },
+    {
+     "path": "png/khuet/srida-khuet-color-1024.png",
+     "bytes": 31363,
+     "width": 1024,
+     "height": 317
+    },
+    {
+     "path": "png/khuet/srida-khuet-color-2048.png",
+     "bytes": 63778,
+     "width": 2048,
+     "height": 633
+    },
+    {
+     "path": "png/khuet/srida-khuet-color-512.png",
+     "bytes": 15014,
+     "width": 512,
+     "height": 158
+    },
+    {
+     "path": "png/khuet/srida-khuet-on-dark-1024.png",
+     "bytes": 29565,
+     "width": 1024,
+     "height": 317
+    },
+    {
+     "path": "png/khuet/srida-khuet-on-dark-2048.png",
+     "bytes": 60109,
+     "width": 2048,
+     "height": 633
+    },
+    {
+     "path": "png/khuet/srida-khuet-on-dark-512.png",
+     "bytes": 14267,
+     "width": 512,
+     "height": 158
+    },
+    {
+     "path": "png/khuet/srida-khuet-white-1024.png",
+     "bytes": 23737,
+     "width": 1024,
+     "height": 317
+    },
+    {
+     "path": "png/khuet/srida-khuet-white-2048.png",
+     "bytes": 48388,
+     "width": 2048,
+     "height": 633
+    },
+    {
+     "path": "png/khuet/srida-khuet-white-512.png",
+     "bytes": 11293,
+     "width": 512,
+     "height": 158
+    },
+    {
+     "path": "png/wao/mascot-tts-1024.png",
+     "bytes": 593457,
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "png/wao/mascot-tts-2048.png",
+     "bytes": 2178844,
+     "width": 2048,
+     "height": 2048
+    },
+    {
+     "path": "png/wao/srida-wao-black-1024.png",
+     "bytes": 35229,
+     "width": 1024,
+     "height": 371
+    },
+    {
+     "path": "png/wao/srida-wao-black-2048.png",
+     "bytes": 74855,
+     "width": 2048,
+     "height": 741
+    },
+    {
+     "path": "png/wao/srida-wao-black-512.png",
+     "bytes": 16944,
+     "width": 512,
+     "height": 185
+    },
+    {
+     "path": "png/wao/srida-wao-color-1024.png",
+     "bytes": 37133,
+     "width": 1024,
+     "height": 371
+    },
+    {
+     "path": "png/wao/srida-wao-color-2048.png",
+     "bytes": 78020,
+     "width": 2048,
+     "height": 741
+    },
+    {
+     "path": "png/wao/srida-wao-color-512.png",
+     "bytes": 17863,
+     "width": 512,
+     "height": 185
+    },
+    {
+     "path": "png/wao/srida-wao-on-dark-1024.png",
+     "bytes": 35199,
+     "width": 1024,
+     "height": 371
+    },
+    {
+     "path": "png/wao/srida-wao-on-dark-2048.png",
+     "bytes": 73775,
+     "width": 2048,
+     "height": 741
+    },
+    {
+     "path": "png/wao/srida-wao-on-dark-512.png",
+     "bytes": 16963,
+     "width": 512,
+     "height": 185
+    },
+    {
+     "path": "png/wao/srida-wao-white-1024.png",
+     "bytes": 28105,
+     "width": 1024,
+     "height": 371
+    },
+    {
+     "path": "png/wao/srida-wao-white-2048.png",
+     "bytes": 59351,
+     "width": 2048,
+     "height": 741
+    },
+    {
+     "path": "png/wao/srida-wao-white-512.png",
+     "bytes": 13463,
+     "width": 512,
+     "height": 185
+    },
+    {
+     "path": "png/yin/mascot-asr-1024.png",
+     "bytes": 598088,
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "png/yin/mascot-asr-2048.png",
+     "bytes": 2242094,
+     "width": 2048,
+     "height": 2048
+    },
+    {
+     "path": "png/yin/srida-yin-black-1024.png",
+     "bytes": 38612,
+     "width": 1024,
+     "height": 422
+    },
+    {
+     "path": "png/yin/srida-yin-black-2048.png",
+     "bytes": 80715,
+     "width": 2048,
+     "height": 844
+    },
+    {
+     "path": "png/yin/srida-yin-black-512.png",
+     "bytes": 18575,
+     "width": 512,
+     "height": 211
+    },
+    {
+     "path": "png/yin/srida-yin-color-1024.png",
+     "bytes": 40339,
+     "width": 1024,
+     "height": 422
+    },
+    {
+     "path": "png/yin/srida-yin-color-2048.png",
+     "bytes": 83194,
+     "width": 2048,
+     "height": 844
+    },
+    {
+     "path": "png/yin/srida-yin-color-512.png",
+     "bytes": 19387,
+     "width": 512,
+     "height": 211
+    },
+    {
+     "path": "png/yin/srida-yin-on-dark-1024.png",
+     "bytes": 38105,
+     "width": 1024,
+     "height": 422
+    },
+    {
+     "path": "png/yin/srida-yin-on-dark-2048.png",
+     "bytes": 78303,
+     "width": 2048,
+     "height": 844
+    },
+    {
+     "path": "png/yin/srida-yin-on-dark-512.png",
+     "bytes": 18319,
+     "width": 512,
+     "height": 211
+    },
+    {
+     "path": "png/yin/srida-yin-white-1024.png",
+     "bytes": 30814,
+     "width": 1024,
+     "height": 422
+    },
+    {
+     "path": "png/yin/srida-yin-white-2048.png",
+     "bytes": 64124,
+     "width": 2048,
+     "height": 844
+    },
+    {
+     "path": "png/yin/srida-yin-white-512.png",
+     "bytes": 14782,
+     "width": 512,
+     "height": 211
+    },
+    {
+     "path": "svg/berng/srida-berng-black.svg",
+     "bytes": 9883
+    },
+    {
+     "path": "svg/berng/srida-berng-color.svg",
+     "bytes": 9832
+    },
+    {
+     "path": "svg/berng/srida-berng-on-dark.svg",
+     "bytes": 9832
+    },
+    {
+     "path": "svg/berng/srida-berng-white.svg",
+     "bytes": 9883
+    },
+    {
+     "path": "svg/khua/srida-khua-black.svg",
+     "bytes": 7629
+    },
+    {
+     "path": "svg/khua/srida-khua-color.svg",
+     "bytes": 7578
+    },
+    {
+     "path": "svg/khua/srida-khua-on-dark.svg",
+     "bytes": 7578
+    },
+    {
+     "path": "svg/khua/srida-khua-white.svg",
+     "bytes": 7629
+    },
+    {
+     "path": "svg/khuet/srida-khuet-black.svg",
+     "bytes": 7232
+    },
+    {
+     "path": "svg/khuet/srida-khuet-color.svg",
+     "bytes": 7181
+    },
+    {
+     "path": "svg/khuet/srida-khuet-on-dark.svg",
+     "bytes": 7181
+    },
+    {
+     "path": "svg/khuet/srida-khuet-white.svg",
+     "bytes": 7232
+    },
+    {
+     "path": "svg/wao/srida-wao-black.svg",
+     "bytes": 7561
+    },
+    {
+     "path": "svg/wao/srida-wao-color.svg",
+     "bytes": 7510
+    },
+    {
+     "path": "svg/wao/srida-wao-on-dark.svg",
+     "bytes": 7510
+    },
+    {
+     "path": "svg/wao/srida-wao-white.svg",
+     "bytes": 7561
+    },
+    {
+     "path": "svg/yin/srida-yin-black.svg",
+     "bytes": 8098
+    },
+    {
+     "path": "svg/yin/srida-yin-color.svg",
+     "bytes": 8047
+    },
+    {
+     "path": "svg/yin/srida-yin-on-dark.svg",
+     "bytes": 8047
+    },
+    {
+     "path": "svg/yin/srida-yin-white.svg",
+     "bytes": 8098
+    }
+   ]
+  },
+  {
+   "id": "05-app-icon",
+   "slug": "app-icon",
+   "name_th": "App icon & Favicon",
+   "name_en": "App icon & favicon",
+   "description_th": "ไอคอนแอปและ favicon (ICO/PNG/SVG) แบบ maskable พร้อมไฟล์ตัวอย่าง site.webmanifest",
+   "description_en": "App icons and favicons (ICO/PNG/SVG), maskable icon and an example site.webmanifest.",
+   "usage_th": "App icon & favicon\n- favicon.ico (16/32/48) · favicon.svg (ไอคอนฝรั่งแบบเล็ก) · png/favicon-16/32/48\n- png/apple-touch-icon-180.png (พื้นขาวเต็มสี่เหลี่ยม ระบบ iOS จะมนมุมให้อัตโนมัติ)\n- png/icon-192, icon-512 (แผ่นขาวมนมุม) · png/icon-maskable-512.png (ไอคอนอยู่ในโซนปลอดภัย 80% ของวงกลม)\n- png/app-icon-white-1024.png, app-icon-ink-1024.png: ส่งขึ้น App Store / Play Store\n- site.webmanifest และ head-snippet.html เป็นตัวอย่าง: ปรับ path ให้ตรงกับเว็บ\n",
+   "zip": "srida-app-icon.zip",
+   "zip_bytes": 155240,
+   "sha256": "7f21dfd9393cda4365717a74696c88c13f95c9321787c813e0fb2a2863da1fec",
+   "preview": "previews/05-app-icon.png",
+   "file_count": 14,
+   "files": [
+    {
+     "path": "README.txt",
+     "bytes": 882
+    },
+    {
+     "path": "favicon.ico",
+     "bytes": 15086
+    },
+    {
+     "path": "favicon.svg",
+     "bytes": 623
+    },
+    {
+     "path": "head-snippet.html",
+     "bytes": 265
+    },
+    {
+     "path": "png/app-icon-ink-1024.png",
+     "bytes": 51614,
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "png/app-icon-white-1024.png",
+     "bytes": 48947,
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "png/apple-touch-icon-180.png",
+     "bytes": 6070,
+     "width": 180,
+     "height": 180
+    },
+    {
+     "path": "png/favicon-16.png",
+     "bytes": 494,
+     "width": 16,
+     "height": 16
+    },
+    {
+     "path": "png/favicon-32.png",
+     "bytes": 1059,
+     "width": 32,
+     "height": 32
+    },
+    {
+     "path": "png/favicon-48.png",
+     "bytes": 1639,
+     "width": 48,
+     "height": 48
+    },
+    {
+     "path": "png/icon-192.png",
+     "bytes": 8017,
+     "width": 192,
+     "height": 192
+    },
+    {
+     "path": "png/icon-512.png",
+     "bytes": 22657,
+     "width": 512,
+     "height": 512
+    },
+    {
+     "path": "png/icon-maskable-512.png",
+     "bytes": 16404,
+     "width": 512,
+     "height": 512
+    },
+    {
+     "path": "site.webmanifest",
+     "bytes": 588
+    }
+   ]
+  },
+  {
+   "id": "06-mascot",
+   "slug": "mascot",
+   "name_th": "มาสคอต \"บักสีดา\"",
+   "name_en": "Mascot \"Baksida\"",
+   "description_th": "มาสคอตบักสีดาครบทั้ง 9 ท่า ไฟล์ PNG พื้นหลังโปร่งใส ขนาด 1024 และ 2048 px พร้อมแนวทางการใช้งาน",
+   "description_en": "Baksida, all 9 poses as transparent PNG at 1024 and 2048, with usage rules.",
+   "usage_th": "บักสีดา — มาสคอต\n\"บักสีดา\" คือฝรั่ง (ภาษาอีสาน) ผ่าซีก สวมชฎาทองของนางสีดา ภาพทุกท่าเป็นภาพ 3D จริง ตัดพื้นหลังแล้ว\nท่า: front = ด้านหน้า (ท่ายืนหลัก) · three-quarter = มุม 3/4 (ท่ายืนหลัก) · back = ด้านหลัง · wave = โบกมือทักทาย · llm = คิดและคุย (Srida Khuet · LLM) · asr = ฟัง (Srida Yin · ASR) · tts = พูด (Srida Wao · TTS) · mt = แปลภาษา (Srida Khua · MT) · vision = มองภาพ (Srida Berng · Vision)\nไฟล์ 2048 ได้จากภาพต้นฉบับ 4096 ย่อลง ไม่ได้ขยายจากไฟล์เล็ก · ตัวละครอยู่กลางภาพ เว้นขอบโปร่งใสโดยรอบ\n\nกติกา\n- ใช้ไฟล์ตามที่จัดเตรียมไว้ ไม่วาดใหม่ ไม่ยืดหรือบีบ ไม่กลับซ้ายขวา ไม่เปลี่ยนสี และไม่ถอดชฎาหรือใบ\n- วางบนพื้นเรียบ (ขาว ครีม ชมพูอ่อน หมึก) ไม่วางบนลวดลายหรือภาพรกตา\n- ท่าประจำสินค้าใช้คู่กับสินค้านั้น: llm=Khuet · asr=Yin · tts=Wao · mt=Khua · vision=Berng\n- เอกสารทางการใช้โลโก้ ไม่ใช้มาสคอตแทนโลโก้",
+   "zip": "srida-mascot.zip",
+   "zip_bytes": 24376120,
+   "sha256": "ce6611085968b794ca8b33f8587f7bff70ec272f390e02a9fbaf0266aa82a914",
+   "preview": "previews/06-mascot.png",
+   "file_count": 19,
+   "files": [
+    {
+     "path": "README.txt",
+     "bytes": 2076
+    },
+    {
+     "path": "png/baksida-asr-1024.png",
+     "bytes": 598088,
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "png/baksida-asr-2048.png",
+     "bytes": 2242094,
+     "width": 2048,
+     "height": 2048
+    },
+    {
+     "path": "png/baksida-back-1024.png",
+     "bytes": 549791,
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "png/baksida-back-2048.png",
+     "bytes": 2046746,
+     "width": 2048,
+     "height": 2048
+    },
+    {
+     "path": "png/baksida-front-1024.png",
+     "bytes": 577296,
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "png/baksida-front-2048.png",
+     "bytes": 2168670,
+     "width": 2048,
+     "height": 2048
+    },
+    {
+     "path": "png/baksida-llm-1024.png",
+     "bytes": 595323,
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "png/baksida-llm-2048.png",
+     "bytes": 2221173,
+     "width": 2048,
+     "height": 2048
+    },
+    {
+     "path": "png/baksida-mt-1024.png",
+     "bytes": 642914,
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "png/baksida-mt-2048.png",
+     "bytes": 2397589,
+     "width": 2048,
+     "height": 2048
+    },
+    {
+     "path": "png/baksida-three-quarter-1024.png",
+     "bytes": 503731,
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "png/baksida-three-quarter-2048.png",
+     "bytes": 1872695,
+     "width": 2048,
+     "height": 2048
+    },
+    {
+     "path": "png/baksida-tts-1024.png",
+     "bytes": 593457,
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "png/baksida-tts-2048.png",
+     "bytes": 2178844,
+     "width": 2048,
+     "height": 2048
+    },
+    {
+     "path": "png/baksida-vision-1024.png",
+     "bytes": 594650,
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "png/baksida-vision-2048.png",
+     "bytes": 2180488,
+     "width": 2048,
+     "height": 2048
+    },
+    {
+     "path": "png/baksida-wave-1024.png",
+     "bytes": 565716,
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "png/baksida-wave-2048.png",
+     "bytes": 2079122,
+     "width": 2048,
+     "height": 2048
+    }
+   ]
+  },
+  {
+   "id": "07-social",
+   "slug": "social",
+   "name_th": "โซเชียลมีเดีย",
+   "name_en": "Social media",
+   "description_th": "โปรไฟล์วงกลม ปก Facebook, LINE OA, YouTube, X และภาพแชร์ OG — ใช้ภาพบักสีดา 3D จริงกับโลโก้",
+   "description_en": "Profile image and covers for Facebook, LINE OA, YouTube, X and OG share image, built from the real 3D mascot and logo.",
+   "usage_th": "ภาพโซเชียล (สร้างจากภาพบักสีดา 3D จริง + โลโก้ + พื้นสีเรียบ ไม่มีลายหรือภาพวาด)\n- profile-*-1024.png: ภาพโปรไฟล์ สี่เหลี่ยมจัตุรัส ตัวภาพอยู่ในวงกลมปลอดภัย 80% (Facebook, LINE, YouTube, X ครอปเป็นวงกลมได้)\n- fb-cover-1640x624-v3.png: ปก Facebook ไม่มีลาย เนื้อหาอยู่ใน x 390–1239 ข้อความอยู่เหนือ y 280 เว้นโซนวงกลมโปรไฟล์กลางล่าง (ระยะปลอดภัยสำหรับการแสดงผลบนมือถือ)\n- line-oa-cover-1080x878.png: LINE OA\n- youtube-banner-2560x1440.png: เนื้อหาทั้งหมดอยู่ใน safe area 1546x423 กลางภาพ (เห็นได้ทุกอุปกรณ์)\n- x-header-1500x500.png: X (Twitter) · og-image-1200x630.png: ภาพแชร์ลิงก์ (Open Graph)\nนำไปอัปโหลดตามขนาดที่ระบุไว้ได้ทันที โดยไม่ต้องย่อหรือขยาย",
+   "zip": "srida-social.zip",
+   "zip_bytes": 2214327,
+   "sha256": "10910825e1fac0c1c6d426a9e06df2ee30e50c6074e88717c9e70766f519b2d3",
+   "preview": "previews/07-social.png",
+   "file_count": 10,
+   "files": [
+    {
+     "path": "README.txt",
+     "bytes": 1585
+    },
+    {
+     "path": "fb-cover-1640x624-v3.png",
+     "bytes": 198015,
+     "width": 1640,
+     "height": 624
+    },
+    {
+     "path": "line-oa-cover-1080x878.png",
+     "bytes": 313970,
+     "width": 1080,
+     "height": 878
+    },
+    {
+     "path": "og-image-1200x630.png",
+     "bytes": 289650,
+     "width": 1200,
+     "height": 630
+    },
+    {
+     "path": "profile-logo-ink-1024.png",
+     "bytes": 27095,
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "profile-logo-white-1024.png",
+     "bytes": 26739,
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "profile-mascot-front-1024.png",
+     "bytes": 465028,
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "profile-mascot-wave-1024.png",
+     "bytes": 453047,
+     "width": 1024,
+     "height": 1024
+    },
+    {
+     "path": "x-header-1500x500.png",
+     "bytes": 223992,
+     "width": 1500,
+     "height": 500
+    },
+    {
+     "path": "youtube-banner-2560x1440.png",
+     "bytes": 254195,
+     "width": 2560,
+     "height": 1440
+    }
+   ]
+  },
+  {
+   "id": "08-colors",
+   "slug": "colors",
+   "name_th": "สีแบรนด์",
+   "name_en": "Brand colours",
+   "description_th": "สีแบรนด์พร้อมโค้ด HEX/RGB/HSL/OKLCH/CMYK (ประมาณ) และไฟล์ tokens: CSS, JSON, Tailwind, Figma, Adobe ASE",
+   "description_en": "Brand colours with HEX/RGB/HSL/OKLCH/CMYK (approximate) and token files: CSS, JSON, Tailwind, Figma, Adobe ASE.",
+   "usage_th": "สีแบรนด์ Srida.ai\nสี | HEX | RGB | HSL | OKLCH | CMYK (ประมาณ) | การใช้งาน\nชมพูเนื้อ (pink) | #F0647E | 240, 100, 126 | 349°, 82%, 67% | 0.685 0.173 11.5 | 0/58/48/6 | สีเน้นของแบรนด์\nเขียวใบ (leaf) | #3A9A40 | 58, 154, 64 | 124°, 45%, 42% | 0.609 0.156 144.4 | 62/0/58/40 | ใบ ก้าน สีเน้นรอง\nหมึก (ink) | #0B0B0C | 11, 11, 12 | 240°, 4%, 5% | 0.15 0.002 286.1 | 8/8/0/95 | ตัวอักษร พื้นเข้ม\nเทา (grey) | #9A9AA0 | 154, 154, 160 | 240°, 3%, 62% | 0.688 0.009 286.2 | 4/4/0/37 | \".ai\" เส้นคั่น\nเขียวเปลือก (rind) | #8CC63F | 140, 198, 63 | 86°, 54%, 51% | 0.76 0.174 129.8 | 29/0/68/22 | เปลือกฝรั่ง\nครีมเมล็ด (seed) | #FFE9C7 | 255, 233, 199 | 36°, 100%, 89% | 0.943 0.05 78.7 | 0/9/22/0 | เมล็ด\nครีมพื้น (cream) | #FFF6E9 | 255, 246, 233 | 35°, 100%, 96% | 0.977 0.02 77.3 | 0/4/9/0 | พื้นหลังอุ่น\nขาว (white) | #FFFFFF | 255, 255, 255 | 0°, 0%, 100% | 1.0 0.0 0 | 0/0/0/0 | พื้นหลังหลัก\nชมพูเข้ม (pink-text) | #C8355A | 200, 53, 90 | 345°, 58%, 50% | 0.561 0.183 10.9 | 0/74/55/22 | ลิงก์ ตัวอักษรชมพู\nเทาเข้ม (grey-text) | #6B6B72 | 107, 107, 114 | 240°, 3%, 43% | 0.53 0.011 286.0 | 6/6/0/55 | ตัวอักษรรอง\n\nไฟล์: srida-colors.css (CSS variables) · srida-colors.json · tailwind.snippet.js · figma-tokens.json (รูปแบบ Design Tokens ใช้กับ Tokens Studio ได้) · srida-colors.ase (Adobe Swatch ใช้ได้ใน Photoshop/Illustrator/InDesign)\nCMYK คือค่าแปลงโดยประมาณจาก RGB ก่อนพิมพ์จริงแนะนำให้พิมพ์ทดสอบเทียบสีกับโรงพิมพ์ · แบรนด์ไม่มีเบอร์สี Pantone",
+   "zip": "srida-colors.zip",
+   "zip_bytes": 4626,
+   "sha256": "176eb3a90da7a3a5455605865f8d921ddfff5e1475f68b1d0c0a41cc2cbd0c63",
+   "preview": "previews/08-colors.png",
+   "file_count": 6,
+   "files": [
+    {
+     "path": "README.txt",
+     "bytes": 2271
+    },
+    {
+     "path": "figma-tokens.json",
+     "bytes": 1756
+    },
+    {
+     "path": "srida-colors.ase",
+     "bytes": 590
+    },
+    {
+     "path": "srida-colors.css",
+     "bytes": 1046
+    },
+    {
+     "path": "srida-colors.json",
+     "bytes": 4856
+    },
+    {
+     "path": "tailwind.snippet.js",
+     "bytes": 455
+    }
+   ]
+  },
+  {
+   "id": "09-fonts",
+   "slug": "fonts",
+   "name_th": "ฟอนต์",
+   "name_en": "Fonts",
+   "description_th": "Outfit (อังกฤษ) และ Prompt (ไทย) พร้อมใบอนุญาต SIL Open Font License",
+   "description_en": "Outfit (Latin) and Prompt (Thai) with the SIL Open Font License texts.",
+   "usage_th": "ฟอนต์แบรนด์\n- Outfit (ตัวอักษรละติน): Outfit-Variable.ttf ปรับน้ำหนักได้ 100–900 · wordmark ใช้น้ำหนัก 750\n- Prompt (ภาษาไทย): Regular / Medium / SemiBold / Bold\nทั้งสองฟอนต์ได้รับอนุญาตภายใต้ SIL Open Font License 1.1 สามารถใช้งานในเชิงพาณิชย์ได้ฟรี ฝังในเว็บ/แอป/เอกสารได้ ห้ามจำหน่ายไฟล์ฟอนต์เดี่ยว ๆ · ดูข้อความสัญญาอนุญาตฉบับเต็มได้ในโฟลเดอร์ licence/\nข้อความทั่วไปใช้ Outfit + Prompt · เอกสารทางการใช้ Prompt",
+   "zip": "srida-fonts.zip",
+   "zip_bytes": 348182,
+   "sha256": "9ff014ddb1c52452f4d236a264df14a13af82cbd2c8751d7244c010065fa84f3",
+   "preview": "previews/09-fonts.png",
+   "file_count": 8,
+   "files": [
+    {
+     "path": "README.txt",
+     "bytes": 1052
+    },
+    {
+     "path": "fonts/Outfit-Variable.ttf",
+     "bytes": 110884
+    },
+    {
+     "path": "fonts/Prompt-Bold.ttf",
+     "bytes": 178804
+    },
+    {
+     "path": "fonts/Prompt-Medium.ttf",
+     "bytes": 176444
+    },
+    {
+     "path": "fonts/Prompt-Regular.ttf",
+     "bytes": 168932
+    },
+    {
+     "path": "fonts/Prompt-SemiBold.ttf",
+     "bytes": 175300
+    },
+    {
+     "path": "licence/OFL-Outfit.txt",
+     "bytes": 4389
+    },
+    {
+     "path": "licence/OFL-Prompt.txt",
+     "bytes": 4452
+    }
+   ]
+  },
+  {
+   "id": "10-documents",
+   "slug": "documents",
+   "name_th": "เอกสารแบรนด์",
+   "name_en": "Brand documents",
+   "description_th": "Brand guideline PDF, ข้อความแนะนำบริษัท (boilerplate) สั้น/ยาว ไทย/อังกฤษ และวิธีสะกด/ออกเสียงชื่อ",
+   "description_en": "Brand guideline PDF, company boilerplate (short/long, TH/EN) and a name spelling/pronunciation guide.",
+   "usage_th": "เอกสารแบรนด์\n- srida-brand-guideline.pdf: คู่มือแบรนด์ (โลโก้ สี ฟอนต์ มาสคอต และแนวทางการใช้งาน)\n- boilerplate/: ข้อความแนะนำบริษัท สั้นและยาว ทั้งภาษาไทยและอังกฤษ สำหรับใช้ในข่าวประชาสัมพันธ์ โปรไฟล์บริษัท และเอกสารทางการ\n- name-guide-th/en.txt: วิธีสะกดและออกเสียงชื่อ\nข้อความเขียนจากข้อมูลที่ยืนยันแล้วเท่านั้น (แท็กไลน์ ที่มาชื่อ สินค้า 5 สาย) ยังไม่มีปีก่อตั้ง ตัวเลข ลูกค้า หรือที่อยู่ หากมีข้อมูลจริงเพิ่มเติม กรุณาระบุให้ครบถ้วนก่อนนำไปเผยแพร่",
+   "zip": "srida-documents.zip",
+   "zip_bytes": 15434521,
+   "sha256": "b611f54bbc7557155fd6423cc4b35da59d74a2ed0870726f3a741b73a124202b",
+   "preview": "previews/10-documents.png",
+   "file_count": 8,
+   "files": [
+    {
+     "path": "README.txt",
+     "bytes": 1354
+    },
+    {
+     "path": "boilerplate/boilerplate-en-long.txt",
+     "bytes": 667
+    },
+    {
+     "path": "boilerplate/boilerplate-en-short.txt",
+     "bytes": 191
+    },
+    {
+     "path": "boilerplate/boilerplate-th-long.txt",
+     "bytes": 1272
+    },
+    {
+     "path": "boilerplate/boilerplate-th-short.txt",
+     "bytes": 300
+    },
+    {
+     "path": "name-guide-en.txt",
+     "bytes": 466
+    },
+    {
+     "path": "name-guide-th.txt",
+     "bytes": 1222
+    },
+    {
+     "path": "srida-brand-guideline.pdf",
+     "bytes": 15610531
+    }
+   ]
+  },
+  {
+   "id": "11-templates",
+   "slug": "templates",
+   "name_th": "เทมเพลต",
+   "name_en": "Templates",
+   "description_th": "นามบัตร 90x55 มม. หัวกระดาษ A4 พื้นหลังประชุมออนไลน์ 1920x1080 (2 แบบ) และลายเซ็นอีเมล HTML",
+   "description_en": "Business card (90x55 mm), A4 letterhead, two 1920x1080 meeting backgrounds and an HTML email signature.",
+   "usage_th": "เทมเพลต (ใช้ภาพบักสีดา 3D จริง + โลโก้ + พื้นสีเรียบ)\n- business-card-front/back-90x55mm.pdf: นามบัตร 90x55 มม. แยกไฟล์ละหน้า ช่องชื่อ/ตำแหน่ง/โทร/อีเมลด้านหลังนามบัตรเป็นข้อความตัวอย่าง สามารถแก้ไขได้ (ระยะเผื่อตัดตก: หากส่งโรงพิมพ์ ให้ขยายพื้นหลังออกไป 3 มม.)\n- letterhead-a4.pdf: หัวกระดาษ A4\n- meeting-background-light/dark-1920x1080.png: พื้นหลังประชุมออนไลน์ (Zoom/Meet/Teams) เว้นพื้นที่ตรงกลางภาพสำหรับผู้พูด\n- email-signature/: signature.html + srida-signature-logo.png\nข้อความตัวอย่างในเทมเพลต (ชื่อ นามสกุล ตำแหน่ง โทร อีเมล) กรุณาแทนที่ด้วยข้อมูลจริงก่อนนำไปใช้งาน",
+   "zip": "srida-templates.zip",
+   "zip_bytes": 6919078,
+   "sha256": "6efbcc2ba3a4b400a400ec27fabe9ae03db9e7b96764aeba664f2d6fe70c445f",
+   "preview": "previews/11-templates.png",
+   "file_count": 8,
+   "files": [
+    {
+     "path": "README.txt",
+     "bytes": 1432
+    },
+    {
+     "path": "business-card-back-90x55mm.pdf",
+     "bytes": 2991528
+    },
+    {
+     "path": "business-card-front-90x55mm.pdf",
+     "bytes": 3019970
+    },
+    {
+     "path": "email-signature/signature.html",
+     "bytes": 1051
+    },
+    {
+     "path": "email-signature/srida-signature-logo.png",
+     "bytes": 11169,
+     "width": 420,
+     "height": 120
+    },
+    {
+     "path": "letterhead-a4.pdf",
+     "bytes": 17316
+    },
+    {
+     "path": "meeting-background-dark-1920x1080.png",
+     "bytes": 447897,
+     "width": 1920,
+     "height": 1080
+    },
+    {
+     "path": "meeting-background-light-1920x1080.png",
+     "bytes": 460368,
+     "width": 1920,
+     "height": 1080
+    }
+   ]
+  }
+ ],
+ "colors": {
+  "brand": "Srida.ai",
+  "note_th": "CMYK เป็นค่าแปลงโดยประมาณจาก RGB ไม่ใช่ค่าที่ผ่านการพิสูจน์สีกับโรงพิมพ์ · ไม่มีเบอร์ Pantone",
+  "note_en": "CMYK values are a naive conversion from RGB, not press-proofed. No Pantone references.",
+  "colors": [
+   {
+    "key": "pink",
+    "name_th": "ชมพูเนื้อ",
+    "use_th": "สีเน้นของแบรนด์",
+    "tier": "main",
+    "hex": "#F0647E",
+    "rgb": [
+     240,
+     100,
+     126
+    ],
+    "hsl": [
+     349,
+     82,
+     67
+    ],
+    "oklch": [
+     0.685,
+     0.173,
+     11.5
+    ],
+    "cmyk_approx": [
+     0,
+     58,
+     48,
+     6
+    ]
+   },
+   {
+    "key": "leaf",
+    "name_th": "เขียวใบ",
+    "use_th": "ใบ ก้าน สีเน้นรอง",
+    "tier": "main",
+    "hex": "#3A9A40",
+    "rgb": [
+     58,
+     154,
+     64
+    ],
+    "hsl": [
+     124,
+     45,
+     42
+    ],
+    "oklch": [
+     0.609,
+     0.156,
+     144.4
+    ],
+    "cmyk_approx": [
+     62,
+     0,
+     58,
+     40
+    ]
+   },
+   {
+    "key": "ink",
+    "name_th": "หมึก",
+    "use_th": "ตัวอักษร พื้นเข้ม",
+    "tier": "main",
+    "hex": "#0B0B0C",
+    "rgb": [
+     11,
+     11,
+     12
+    ],
+    "hsl": [
+     240,
+     4,
+     5
+    ],
+    "oklch": [
+     0.15,
+     0.002,
+     286.1
+    ],
+    "cmyk_approx": [
+     8,
+     8,
+     0,
+     95
+    ]
+   },
+   {
+    "key": "grey",
+    "name_th": "เทา",
+    "use_th": "\".ai\" เส้นคั่น",
+    "tier": "main",
+    "hex": "#9A9AA0",
+    "rgb": [
+     154,
+     154,
+     160
+    ],
+    "hsl": [
+     240,
+     3,
+     62
+    ],
+    "oklch": [
+     0.688,
+     0.009,
+     286.2
+    ],
+    "cmyk_approx": [
+     4,
+     4,
+     0,
+     37
+    ]
+   },
+   {
+    "key": "rind",
+    "name_th": "เขียวเปลือก",
+    "use_th": "เปลือกฝรั่ง",
+    "tier": "minor",
+    "hex": "#8CC63F",
+    "rgb": [
+     140,
+     198,
+     63
+    ],
+    "hsl": [
+     86,
+     54,
+     51
+    ],
+    "oklch": [
+     0.76,
+     0.174,
+     129.8
+    ],
+    "cmyk_approx": [
+     29,
+     0,
+     68,
+     22
+    ]
+   },
+   {
+    "key": "seed",
+    "name_th": "ครีมเมล็ด",
+    "use_th": "เมล็ด",
+    "tier": "minor",
+    "hex": "#FFE9C7",
+    "rgb": [
+     255,
+     233,
+     199
+    ],
+    "hsl": [
+     36,
+     100,
+     89
+    ],
+    "oklch": [
+     0.943,
+     0.05,
+     78.7
+    ],
+    "cmyk_approx": [
+     0,
+     9,
+     22,
+     0
+    ]
+   },
+   {
+    "key": "cream",
+    "name_th": "ครีมพื้น",
+    "use_th": "พื้นหลังอุ่น",
+    "tier": "minor",
+    "hex": "#FFF6E9",
+    "rgb": [
+     255,
+     246,
+     233
+    ],
+    "hsl": [
+     35,
+     100,
+     96
+    ],
+    "oklch": [
+     0.977,
+     0.02,
+     77.3
+    ],
+    "cmyk_approx": [
+     0,
+     4,
+     9,
+     0
+    ]
+   },
+   {
+    "key": "white",
+    "name_th": "ขาว",
+    "use_th": "พื้นหลังหลัก",
+    "tier": "minor",
+    "hex": "#FFFFFF",
+    "rgb": [
+     255,
+     255,
+     255
+    ],
+    "hsl": [
+     0,
+     0,
+     100
+    ],
+    "oklch": [
+     1.0,
+     0.0,
+     0
+    ],
+    "cmyk_approx": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "key": "pink-text",
+    "name_th": "ชมพูเข้ม",
+    "use_th": "ลิงก์ ตัวอักษรชมพู",
+    "tier": "minor",
+    "hex": "#C8355A",
+    "rgb": [
+     200,
+     53,
+     90
+    ],
+    "hsl": [
+     345,
+     58,
+     50
+    ],
+    "oklch": [
+     0.561,
+     0.183,
+     10.9
+    ],
+    "cmyk_approx": [
+     0,
+     74,
+     55,
+     22
+    ]
+   },
+   {
+    "key": "grey-text",
+    "name_th": "เทาเข้ม",
+    "use_th": "ตัวอักษรรอง",
+    "tier": "minor",
+    "hex": "#6B6B72",
+    "rgb": [
+     107,
+     107,
+     114
+    ],
+    "hsl": [
+     240,
+     3,
+     43
+    ],
+    "oklch": [
+     0.53,
+     0.011,
+     286.0
+    ],
+    "cmyk_approx": [
+     6,
+     6,
+     0,
+     55
+    ]
+   }
+  ]
+ },
+ "boilerplate": {
+  "th-short": "Srida.ai (สีดา) ผู้นำด้าน Local AI ในประเทศไทย พัฒนาผลิตภัณฑ์ AI ครอบคลุม 5 ด้าน ได้แก่ Srida Khuet (LLM), Srida Yin (ASR), Srida Wao (TTS), Srida Khua (MT) และ Srida Berng (Vision)",
+  "th-long": "Srida.ai (สีดา) ผู้นำด้าน Local AI ในประเทศไทย\n\nSrida.ai พัฒนาผลิตภัณฑ์ AI ครอบคลุม 5 ด้านหลัก โดยตั้งชื่อตามภาษาอีสาน:\n• Srida Khuet (คึด = คิด) — LLM โมเดลภาษา\n• Srida Yin (ยิน = ได้ยิน) — ASR ถอดเสียงพูดเป็นข้อความ\n• Srida Wao (เว้า = พูด) — TTS สร้างเสียงพูดจากข้อความ\n• Srida Khua (ขัว = สะพาน) — MT แปลภาษา\n• Srida Berng (เบิ่ง = ดู) — Vision วิเคราะห์ภาพ\n\nที่มาของชื่อ: คำว่า \"สีดา\" มีที่มาจาก \"บักสีดา\" ภาษาอีสานที่หมายถึงฝรั่ง (Guava) ผสานกับชื่อ \"นางสีดา\" ตัวละครจากวรรณคดีรามเกียรติ์ โดยมีมาสคอตประจำแบรนด์คือ \"บักสีดา\" ผลฝรั่งผ่าซีกสวมชฎาทอง",
+  "en-short": "Srida.ai (สีดา) is the leader in Local AI in Thailand. It builds five AI product lines: Srida Khuet (LLM), Srida Yin (ASR), Srida Wao (TTS), Srida Khua (MT) and Srida Berng (Vision).",
+  "en-long": "Srida.ai (สีดา): the leader in Local AI in Thailand.\n\nSrida.ai builds five AI product lines, each named with an Isan (northeastern Thai) word:\n• Srida Khuet (คึด, \"to think\") — LLM, language model\n• Srida Yin (ยิน, \"to hear\") — ASR, speech-to-text\n• Srida Wao (เว้า, \"to speak\") — TTS, text-to-speech\n• Srida Khua (ขัว, \"bridge\") — MT, machine translation\n• Srida Berng (เบิ่ง, \"to look\") — Vision, image understanding\n\nAbout the name: \"Srida\" comes from \"Baksida\", the Isan word for guava, and from Nang Sida (Sita) of the Ramakien. The mascot is \"Baksida\": a halved guava wearing Sita's golden crown."
+ },
+ "singles": {
+  "app-icon": [
+   {
+    "href": "/brand/pack/files/app-icon/favicon.ico",
+    "label": "favicon.ico"
+   },
+   {
+    "href": "/brand/pack/files/app-icon/icon-512.png",
+    "label": "PNG 512"
+   }
+  ],
+  "social": [
+   {
+    "href": "/brand/pack/files/social/og-image-1200x630.png",
+    "label": "ภาพแชร์ OG"
+   },
+   {
+    "href": "/brand/pack/files/social/profile-mascot-front-1024.png",
+    "label": "ภาพโปรไฟล์"
+   }
+  ],
+  "colors": [
+   {
+    "href": "/brand/pack/files/colors/srida-colors.css",
+    "label": "CSS"
+   },
+   {
+    "href": "/brand/pack/files/colors/srida-colors.json",
+    "label": "JSON"
+   }
+  ],
+  "documents": [
+   {
+    "href": "/brand/pack/files/documents/boilerplate-th-short.txt",
+    "label": "ข้อความแนะนำ TXT"
+   }
+  ],
+  "templates": [
+   {
+    "href": "/brand/pack/files/templates/letterhead-a4.pdf",
+    "label": "หัวกระดาษ A4"
+   },
+   {
+    "href": "/brand/pack/files/templates/meeting-background-light-1920x1080.png",
+    "label": "พื้นหลังประชุม"
+   }
+  ]
+ }
+}
