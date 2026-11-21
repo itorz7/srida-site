@@ -1,5 +1,6 @@
 // บักสีดา moves. Every .disc[data-clip] holds her still picture (the clip's first pose); this lays the short loop over it.
-// An extra, loaded at idle by site.js and never under reduced motion or Save-Data: without it the page shows the stills.
+// An extra, loaded at idle by site.js and not under Save-Data: without it the page shows the stills. It also runs under reduced motion:
+// she moves in place (a short loop, a clip on tap or hover), which is not the parallax, tilt or scroll motion that setting is about (those are fx.js, off).
 // Only a clip that is on screen plays; on a touch screen one clip plays at a time (the one nearest the middle of the screen);
 // everything stops while the tab is hidden. data-hover names a clip that plays once on hover (mouse) or tap (touch).
 // Chrome, Edge, Firefox and Android play WebM (VP9) clips with a transparent background. Safari and every browser on iPhone
@@ -92,7 +93,7 @@ function once(el) { // the hover / tap clip: played once over the loop, then the
 }
 
 export function initMascot() {
-  if (!(SAFARI || CAN_VP9) || matchMedia('(prefers-reduced-motion: reduce)').matches || navigator.connection?.saveData || !('IntersectionObserver' in window)) return;
+  if (!(SAFARI || CAN_VP9) || navigator.connection?.saveData || !('IntersectionObserver' in window)) return;
   const io = new IntersectionObserver((entries) => {
     for (const e of entries) seen.set(e.target, e.isIntersecting ? e.intersectionRatio : 0);
     update();

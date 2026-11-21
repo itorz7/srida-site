@@ -233,15 +233,14 @@ export function initSite() {
 
   wireContact();
 
-  // pointer and scroll motion is an extra: it starts once the page is idle, and never under reduced motion
-  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    const start = () => {
-      import('./fx.js').then((m) => m.initFx()).catch(() => {});
-      import('./mascot.js').then((m) => m.initMascot()).catch(() => {}); // บักสีดา's clips: an extra as well
-    };
-    if ('requestIdleCallback' in window) requestIdleCallback(start, { timeout: 1500 });
-    else setTimeout(start, 300);
-  }
+  // motion is an extra: it starts once the page is idle. บักสีดา's clips play in place (they are not the kind of motion reduced motion
+  // is for), so they load under reduced motion too; pointer and scroll motion (fx.js) never runs under it.
+  const start = () => {
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) import('./fx.js').then((m) => m.initFx()).catch(() => {});
+    import('./mascot.js').then((m) => m.initMascot()).catch(() => {});
+  };
+  if ('requestIdleCallback' in window) requestIdleCallback(start, { timeout: 1500 });
+  else setTimeout(start, 300);
 }
 
 // Mark the link whose section is in view (top-bar anchors on the home page, the contents list of an article).
