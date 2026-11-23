@@ -6,12 +6,26 @@
 // Chrome, Edge, Firefox and Android play WebM (VP9) clips with a transparent background. Safari and every browser on iPhone
 // cannot show WebM alpha, so they get the same pose as an animated WebP with alpha, laid over her still the same way (no canvas, no WebGL).
 // Only one layer of her is ever visible: the still goes the moment the first frame of a clip is up, and comes back if the clip fails.
+// No clip is fetched while the page loads: the loops start after the load event and one idle moment. A hover or tap on her starts
+// her clip at once. On a slow connection (effectiveType 2g / 3g) she stays still until she is tapped or hovered.
+// Each clip comes in four widths (tools/enc_clips.py): the smallest that covers the disc as drawn (CSS width x DPR up to 2,
+// x 0.8 on a touch screen), else the largest.
 const SAFARI = /^((?!chrome|chromium|android|crios|fxios|edg).)*safari/i.test(navigator.userAgent) || /iphone|ipad|ipod/i.test(navigator.userAgent);
 const CAN_VP9 = !!document.createElement('video').canPlayType('video/webm; codecs="vp9"');
 const FINE = matchMedia('(hover: hover) and (pointer: fine)').matches;
-const file = (name, el) => `/assets/mascot/clip/baksida-${name}-${el.clientWidth * Math.min(window.devicePixelRatio || 1, 2) > 520 ? 720 : 480}.webm`;
+const SLOW = /^(slow-2g|2g|3g)$/.test(navigator.connection?.effectiveType || '');
+const SIZES = [240, 360, 480, 720];
+const size = (el) => {
+  const need = el.clientWidth * Math.min(window.devicePixelRatio || 1, 2) * (FINE ? 1 : 0.8);
+  return SIZES.find((s) => s >= need) || SIZES[SIZES.length - 1];
+};
+const CLIPS = '/assets/mascot/clip/v2/baksida-'; // a new encode goes into a new folder: a clip's URL never changes content
+const file = (name, el) => `${CLIPS}${name}-${size(el)}.webm`;
+const animFile = (name, el) => `${CLIPS}${name}-anim-${size(el)}.webp`;
 const seen = new Map(); // disc → share of it on screen
 const clips = new WeakMap(); // disc → its looping <video>
+const woken = new WeakSet(); // discs a hover or tap started before the loops start on their own (or on a slow connection)
+let auto = false; // the loops start on their own: after load + idle, never on a slow connection
 
 function layer(el, name, loop) {
   if (SAFARI) return anim(el, name, loop);
@@ -32,13 +46,6 @@ function layer(el, name, loop) {
   return v;
 }
 
-// iPhone / iPad: a phone-sized animated WebP (160 / 240 / 360 px: the size shown x DPR 2, never more than 360). Desktop Safari keeps the 540 px file.
-const ANIM_SIZES = [160, 240, 360];
-const animFile = (name, el) => {
-  if (FINE) return `/assets/mascot/clip/baksida-${name}-anim.webp`;
-  const need = el.clientWidth * Math.min(window.devicePixelRatio || 1, 2) * 0.8;
-  return `/assets/mascot/clip/baksida-${name}-anim-${ANIM_SIZES.find((s) => s >= need) || 360}.webp`;
-};
 const FRAMES = { idle: 7.6, wave: 7.6, llm: 7.6, asr: 7.6, tts: 7.6, mt: 3.3, vision: 7.6 };
 function anim(el, name, loop) { // Safari: an animated WebP over the still; "playing" = loaded, "paused" = removed
   const v = document.createElement('img');
@@ -58,7 +65,7 @@ function anim(el, name, loop) { // Safari: an animated WebP over the still; "pla
 }
 
 function update() {
-  const on = [...seen].filter(([el, share]) => share >= (el.closest('.stage--hero') ? 0.2 : 0.35) && el.isConnected).map(([el]) => el);
+  const on = [...seen].filter(([el, share]) => (auto || woken.has(el)) && share >= (el.closest('.stage--hero') ? 0.2 : 0.35) && el.isConnected).map(([el]) => el);
   let play = on;
   if (!FINE && on.length > 1) {
     const mid = innerHeight / 2;
@@ -101,12 +108,18 @@ export function initMascot() {
   document.querySelectorAll('.disc[data-clip]').forEach((el) => {
     seen.set(el, 0);
     io.observe(el);
-    if (!el.dataset.hover) return;
-    if (FINE) el.addEventListener('pointerenter', () => once(el));
-    else el.addEventListener('click', () => once(el));
+    const wake = () => { woken.add(el); if (el.dataset.hover) once(el); else update(); };
+    if (FINE) el.addEventListener('pointerenter', wake);
+    else el.addEventListener('click', wake);
   });
   document.addEventListener('visibilitychange', update);
   addEventListener('scroll', () => { if (!FINE) requestAnimationFrame(update); }, { passive: true });
+  if (!SLOW) {
+    const start = () => { auto = true; update(); };
+    const idle = () => ('requestIdleCallback' in window ? requestIdleCallback(start, { timeout: 2000 }) : setTimeout(start, 300));
+    if (document.readyState === 'complete') idle();
+    else addEventListener('load', idle, { once: true });
+  }
 
   // moving parts that have left the screen stand still until they come back (the stylesheet pauses .is-away)
   const away = new IntersectionObserver((entries) => entries.forEach((e) => e.target.classList.toggle('is-away', !e.isIntersecting)));

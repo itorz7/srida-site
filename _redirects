@@ -1,0 +1,30 @@
+# Cloudflare Workers static assets (ORDER-perf-seo C0): the old article addresses move for good.
+# (GitHub Pages ignores this file and keeps serving the small pages at /articles/ that point the same way.)
+/articles /blog/ 301
+/articles/* /blog/:splat 301
+# Every page without its trailing slash, or as index.html, moves for good to its address (written by tools/build.py).
+/index.html / 301
+/khuet /khuet/ 301
+/khuet/index.html /khuet/ 301
+/yin /yin/ 301
+/yin/index.html /yin/ 301
+/wao /wao/ 301
+/wao/index.html /wao/ 301
+/khua /khua/ 301
+/khua/index.html /khua/ 301
+/berng /berng/ 301
+/berng/index.html /berng/ 301
+/blog /blog/ 301
+/blog/index.html /blog/ 301
+/blog/private-ai-in-organisation /blog/private-ai-in-organisation/ 301
+/blog/private-ai-in-organisation/index.html /blog/private-ai-in-organisation/ 301
+/blog/thai-speech-to-text /blog/thai-speech-to-text/ 301
+/blog/thai-speech-to-text/index.html /blog/thai-speech-to-text/ 301
+/blog/what-is-local-ai /blog/what-is-local-ai/ 301
+/blog/what-is-local-ai/index.html /blog/what-is-local-ai/ 301
+/pricing /pricing/ 301
+/pricing/index.html /pricing/ 301
+/brand /brand/ 301
+/brand/index.html /brand/ 301
+/products /products/ 301
+/products/index.html /products/ 301

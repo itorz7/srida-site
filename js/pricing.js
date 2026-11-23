@@ -1,6 +1,8 @@
-// /pricing/: draws the rows again from /data/pricing.json, so a price or a package changes by editing that one file (no build).
+// /pricing/: the rows are in the page from the build. After load the page asks for /data/pricing.json once and draws the rows
+// again only when the file changed since that build (its digest differs from data-catalog), so a price or a package still
+// changes by editing that one file. A file that cannot be read leaves the built rows.
 // row() mirrors row() in tools/content_pricing.py: change both together. Text from the file is never parsed as HTML.
-import { initSite } from './site.js';
+import { initSite, afterLoad, catalogHash } from './site.js';
 
 initSite();
 
@@ -38,15 +40,20 @@ function row(p, s) {
 }
 
 if (list && tick) {
+  await afterLoad();
   try {
     const res = await fetch('/data/pricing.json', { cache: 'no-cache' });
-    if (res.ok) {
-      const data = await res.json();
+    const buf = res.ok ? await res.arrayBuffer() : null;
+    const hash = buf && (await catalogHash(buf));
+    window.sridaCatalog = !buf ? 'kept' : hash && hash === list.dataset.catalog ? 'same' : 'drawn';
+    if (window.sridaCatalog === 'drawn') {
+      const data = JSON.parse(new TextDecoder().decode(buf));
       const s = { ...DEFAULTS, ...(data.settings || {}) };
       const plans = (Array.isArray(data.plans) ? data.plans : []).filter((p) => p && p.id && p.name && !p.hidden);
       list.replaceChildren(...(plans.length ? plans.map((p) => row(p, s)) : [h('li', { class: 'state', role: 'status' }, 'ยังไม่มีแพ็กเกจในตอนนี้')]));
     }
   } catch {
-    // the rows written at build time stay
+    window.sridaCatalog = 'kept'; // the rows written at build time stay
   }
+  dispatchEvent(new Event('srida:catalog'));
 }

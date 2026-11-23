@@ -1,4 +1,4 @@
-import { initSite, initTabs, settlePhrases, trackSections } from './site.js';
+import { initSite, initTabs, settlePhrases, trackSections, afterLoad } from './site.js';
 import { initRiskCheck } from './risk.js';
 import { loadCatalog, card, featureTile, stateNode } from './shop.js';
 
@@ -47,25 +47,40 @@ if (show) {
       const i = Math.min(tabs.length - 1, Math.floor(t * tabs.length));
       if (i !== index) select(tabs[i], { by: 'scroll' });
     };
-    // every line must fit the pinned screen, or the section stays as plain tabs
-    const fits = () => {
-      const cs = getComputedStyle(pin);
-      const room = pin.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
-      const was = panels.map((p) => p.hidden);
-      const ok = panels.every((p) => {
-        panels.forEach((q) => (q.hidden = q !== p));
-        return pin.firstElementChild.offsetHeight <= room;
-      });
-      panels.forEach((p, i) => (p.hidden = was[i]));
-      return ok;
+    // Every line must fit the pinned screen, or the section stays as plain tabs. The check only writes classes: .is-measuring
+    // lays the section out pinned with all five panels on top of each other, out of the flow (styles.css), and the
+    // ResizeObserver reads their sizes from its entries after the browser's own layout, before that frame is painted. So no
+    // script forces a layout, the measuring layout is never on screen, and a screen that will not pin never shows a pinned frame.
+    const body = pin.querySelector('.story-body');
+    const wrap = pin.firstElementChild;
+    const parts = [pin, wrap, body, show, ...panels];
+    const size = new Map();
+    let measuring = false;
+    const apply = (pin) => {
+      measuring = false;
+      pinned = pin;
+      story.classList.remove('is-measuring');
+      story.classList.toggle('is-story', pin);
+      show.setAttribute('aria-orientation', pin ? 'vertical' : 'horizontal');
+      if (pin) requestAnimationFrame(place); // the next frame: its layout is clean, so reading the track's place costs nothing
     };
+    const sizes = new ResizeObserver((entries) => {
+      for (const e of entries) size.set(e.target, { block: e.borderBoxSize[0].blockSize, content: e.contentBoxSize[0].blockSize });
+      if (!measuring) return;
+      // The wrap with line i shown = the wrap as measured (the body's one row as tall as the tabs) + what line i adds beyond
+      // that row. Rounded like the offsetHeight and clientHeight the check used before, so the same screens pin.
+      const row = size.get(body).content;
+      const tallest = Math.max(...panels.map((p) => size.get(p)?.block || 0));
+      const room = Math.round(size.get(pin).block) - (size.get(pin).block - size.get(pin).content);
+      apply(Math.round(size.get(wrap).block + Math.max(0, tallest - row)) <= room);
+    });
     const setMode = () => {
-      const room = wide.matches && !book.matches;
-      story.classList.toggle('is-story', room);
-      pinned = room && fits();
-      story.classList.toggle('is-story', pinned);
-      show.setAttribute('aria-orientation', pinned ? 'vertical' : 'horizontal');
-      if (pinned) place();
+      if (!(wide.matches && !book.matches)) return apply(false);
+      measuring = true;
+      story.classList.add('is-story', 'is-measuring');
+      // observing again makes every part report its size in this frame, even one that has not changed since the last check
+      sizes.disconnect();
+      parts.forEach((el) => sizes.observe(el));
     };
     let frame = 0;
     addEventListener('scroll', () => {
@@ -83,6 +98,7 @@ if (show) {
     wide.addEventListener('change', setMode);
     book.addEventListener?.('change', setMode);
     document.fonts?.ready.then(setMode);
+    document.fonts?.addEventListener?.('loadingdone', setMode); // a face that arrives later still changes the lines' heights
     setMode();
   }
 }
@@ -90,22 +106,28 @@ if (show) {
 /* ---------- top bar: mark the section in view ---------- */
 trackSections(new Map([...document.querySelectorAll('.nav a[href^="/#"]')].map((a) => [a.getAttribute('href').slice(2), a])));
 
-/* ---------- products from /data/products.json ---------- */
+/* ---------- products: built into the page; drawn again after load only when /data/products.json changed since the build ---------- */
 const featureSlot = document.querySelector('[data-featured]');
 const grid = document.querySelector('[data-products]');
+await afterLoad();
 try {
-  const { products, settings } = await loadCatalog();
-  const featured = products.find((p) => p.featured) || products[0];
-  if (featureSlot) {
-    if (featured) featureSlot.querySelector('.wrap').replaceChildren(featureTile(featured, settings));
-    else featureSlot.hidden = true;
-  }
-  if (grid) {
-    const limit = Number(grid.dataset.limit) || products.length;
-    grid.replaceChildren(...(products.length ? products.slice(0, limit).map((p) => card(p, settings)) : [stateNode('ยังไม่มีสินค้าในตอนนี้')]));
+  const { products, settings, hash } = await loadCatalog();
+  if (hash && hash === grid?.dataset.catalog) {
+    window.sridaCatalog = 'same';
+  } else {
+    const featured = products.find((p) => p.featured) || products[0];
+    if (featureSlot) {
+      if (featured) featureSlot.querySelector('.wrap').replaceChildren(featureTile(featured, settings));
+      featureSlot.hidden = !featured;
+    }
+    if (grid) {
+      const limit = Number(grid.dataset.limit) || products.length;
+      grid.replaceChildren(...(products.length ? products.slice(0, limit).map((p) => card(p, settings)) : [stateNode('ยังไม่มีสินค้าในตอนนี้')]));
+    }
+    settlePhrases();
+    window.sridaCatalog = 'drawn';
   }
 } catch {
-  if (featureSlot) featureSlot.hidden = true;
-  grid?.replaceChildren(stateNode('โหลดรายการสินค้าไม่สำเร็จ ลองรีเฟรชหน้านี้อีกครั้ง'));
+  window.sridaCatalog = 'kept'; // the cards written at build time stay
 }
-settlePhrases();
+dispatchEvent(new Event('srida:catalog'));

@@ -46,13 +46,32 @@ function heroTilt() {
   hero.addEventListener('pointerleave', () => aim(0, 0));
 }
 
-// Only what starts below the first screen is hidden, so the first paint is never held back.
+// Only what starts below the first screen is hidden, so the first paint is never held back. Where each element starts is read
+// from the observer's first report, made after the browser's own layout: nothing here makes the page lay out again, and a
+// part of the page that is not drawn yet (content-visibility: no box) counts as below the first screen.
+const startsBelow = (en, line) => !en.isIntersecting && (en.boundingClientRect.top >= line || (!en.boundingClientRect.width && !en.boundingClientRect.height));
+
 function reveals() {
   if (!('IntersectionObserver' in window)) return;
+  const placed = new WeakSet();
+  const count = new Map();
   const io = new IntersectionObserver((entries) => {
     entries.forEach((en) => {
-      if (!en.isIntersecting) return;
       const el = en.target;
+      if (!el.isConnected) return io.unobserve(el); // drawn again by its page script (pricing.js, home.js): the new one is not watched
+      if (!placed.has(el)) {
+        placed.add(el);
+        if (!startsBelow(en, innerHeight * 0.94) || el.parentElement.closest('.rv')) {
+          io.unobserve(el);
+          return;
+        }
+        const n = count.get(el.parentElement) || 0;
+        count.set(el.parentElement, n + 1);
+        if (n) el.style.setProperty('--d', `${Math.min(n, 5) * 70}ms`);
+        el.classList.add('rv');
+        return;
+      }
+      if (!en.isIntersecting) return;
       io.unobserve(el);
       el.classList.add('is-in');
       setTimeout(() => {
@@ -61,26 +80,32 @@ function reveals() {
       }, 1700);
     });
   }, { rootMargin: '0px 0px -7% 0px', threshold: 0.04 });
-  // read every position first, then write: one layout pass for the page, not one per element
-  const below = [...document.querySelectorAll(REVEAL)].filter((el) => !el.closest('[hidden]') && el.getBoundingClientRect().top >= innerHeight * 0.94);
-  const count = new Map();
-  below.forEach((el) => {
-    if (el.parentElement.closest('.rv')) return;
-    const n = count.get(el.parentElement) || 0;
-    count.set(el.parentElement, n + 1);
-    if (n) el.style.setProperty('--d', `${Math.min(n, 5) * 70}ms`);
-    el.classList.add('rv');
-    io.observe(el);
-  });
+  document.querySelectorAll(REVEAL).forEach((el) => !el.closest('[hidden]') && io.observe(el));
 }
 
 // Figures count up once, when they are read. Screen readers get the final number, not the count.
 function counters() {
   if (!('IntersectionObserver' in window)) return;
+  const placed = new WeakSet();
   const io = new IntersectionObserver((entries) => {
     entries.forEach((en) => {
-      if (!en.isIntersecting) return;
       const el = en.target;
+      if (!el.isConnected) return io.unobserve(el);
+      if (!placed.has(el)) {
+        placed.add(el);
+        if (!startsBelow(en, innerHeight)) {
+          io.unobserve(el);
+          return;
+        }
+        const real = document.createElement('span');
+        real.className = 'sr-only';
+        real.textContent = el.textContent;
+        el.after(real);
+        el.setAttribute('aria-hidden', 'true');
+        el.textContent = '0';
+        return;
+      }
+      if (!en.isIntersecting) return;
       io.unobserve(el);
       const to = Number(el.dataset.count);
       const t0 = performance.now();
@@ -92,16 +117,7 @@ function counters() {
       requestAnimationFrame(tick);
     });
   }, { threshold: 0.6 });
-  const below = [...document.querySelectorAll('[data-count]')].filter((el) => Number.isFinite(Number(el.dataset.count)) && el.getBoundingClientRect().top >= innerHeight);
-  below.forEach((el) => {
-    const real = document.createElement('span');
-    real.className = 'sr-only';
-    real.textContent = el.textContent;
-    el.after(real);
-    el.setAttribute('aria-hidden', 'true');
-    el.textContent = '0';
-    io.observe(el);
-  });
+  document.querySelectorAll('[data-count]').forEach((el) => Number.isFinite(Number(el.dataset.count)) && io.observe(el));
 }
 
 const load = (src) => new Promise((ok, no) => {

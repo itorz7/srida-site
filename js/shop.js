@@ -1,4 +1,7 @@
 // The shop: everything here is drawn from /data/products.json. Add, remove or edit a product in that file only.
+// The build writes the same cards into the page (tools/shop_static.py); the pages ask for the file once, after load,
+// and draw the cards again only when the file has changed since that build (its digest differs from data-catalog).
+import { catalogHash } from './site.js';
 const LOGO = '/assets/logo-224.webp';
 const DEFAULTS = {
   orderUrl: '',
@@ -17,16 +20,23 @@ const NBSP = '\u00a0';
 const escapeRe = (w) => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 const pattern = (words) => (words.length ? new RegExp(words.map(escapeRe).join('|'), 'g') : null);
 
-export async function loadCatalog() {
+// One request per page, whoever asks first: { settings, products, hash }.
+let catalog = null;
+export function loadCatalog() {
+  return (catalog ||= readCatalog());
+}
+
+async function readCatalog() {
   const res = await fetch('/data/products.json', { cache: 'no-cache' });
   if (!res.ok) throw new Error('products.json: HTTP ' + res.status);
-  const data = await res.json();
+  const buf = await res.arrayBuffer();
+  const data = JSON.parse(new TextDecoder().decode(buf));
   const settings = { ...DEFAULTS, ...(data.settings || {}) };
   const products = (Array.isArray(data.products) ? data.products : []).filter((p) => p && p.id && p.name && !p.hidden);
   const words = list(settings.keepTogether).filter((w) => typeof w === 'string' && w.trim()).map((w) => w.trim()).sort((a, b) => b.length - a.length);
   spacedNames = pattern(words.filter((w) => w.includes(' ')));
   keepTogether = pattern(words.map((w) => w.replaceAll(' ', NBSP)));
-  return { settings, products };
+  return { settings, products, hash: await catalogHash(buf) };
 }
 
 // Build DOM nodes without ever parsing product text as HTML.
@@ -120,10 +130,14 @@ const WIDE_SIZES = '(min-width: 860px) 50vw, 100vw';
 export const PAGE_SIZES = '(min-width: 1300px) 600px, (min-width: 861px) 48vw, 100vw';
 export function productImage(p, src, lazy = true, sizes = src ? WIDE_SIZES : CARD_SIZES) {
   const url = safeUrl(src || p.image);
-  // imageSmall / imageFeaturedSmall: the same picture 800 px wide, for phones; imageLarge / imageFeaturedLarge: 2400 px, for 3x screens
+  // imageSmall / imageFeaturedSmall: the same picture 800 px wide, for phones; imageLarge / imageFeaturedLarge: 2400 px, for 3x screens;
+  // imageTiny: 400 px, for a card on a 1x screen; imageMid: 680 px, for a card on a phone. Same markup as media() in tools/shop_static.py.
   const small = url ? safeUrl(src ? p.imageFeaturedSmall : p.imageSmall) : '';
   const large = small ? safeUrl(src ? p.imageFeaturedLarge : p.imageLarge) : '';
-  const img = el('img', { class: url ? null : 'is-fallback', src: url || LOGO, srcset: small && `${small} 800w, ${url} 1600w${large ? `, ${large} 2400w` : ''}`, sizes: small && sizes, alt: p.imageAlt || p.name, loading: lazy && 'lazy', decoding: 'async', width: 1200, height: 1200 });
+  const tiny = small && !src ? safeUrl(p.imageTiny) : '';
+  const mid = small && !src ? safeUrl(p.imageMid) : ''; // 680 px: a card on a phone
+  const srcset = small && `${tiny ? `${tiny} 400w, ` : ''}${mid ? `${mid} 680w, ` : ''}${small} 800w, ${url} 1600w${large ? `, ${large} 2400w` : ''}`;
+  const img = el('img', { class: url ? null : 'is-fallback', src: url || LOGO, srcset, sizes: small && sizes, alt: p.imageAlt || p.name, loading: lazy && 'lazy', fetchpriority: !lazy && 'high', decoding: 'async', width: 1200, height: 1200 });
   let retried = false;
   img.addEventListener('error', () => {
     if (img.classList.contains('is-fallback')) return;
@@ -140,14 +154,15 @@ export function productImage(p, src, lazy = true, sizes = src ? WIDE_SIZES : CAR
   return img;
 }
 
-function media(p, settings, src) {
-  return [productImage(p, src), p.sample && el('span', { class: 'tag', text: settings.sampleLabel })];
+function media(p, settings, src, lazy = true) {
+  return [productImage(p, src, lazy), p.sample && el('span', { class: 'tag', text: settings.sampleLabel })];
 }
 
-export function card(p, settings, { full = false } = {}) {
+// eager: the first card of /products/, the picture Lighthouse measures as LCP there
+export function card(p, settings, { full = false, eager = false } = {}) {
   const url = productUrl(p);
   return el('article', { class: full ? 'p-card p-card--full' : 'p-card', 'data-id': p.id, 'data-category': p.category || '' },
-    el('div', { class: 'p-media' }, media(p, settings)),
+    el('div', { class: 'p-media' }, media(p, settings, undefined, !eager)),
     el('div', { class: 'p-body' },
       el('h3', { class: 'p-name' }, el('a', { href: url, text: p.name })),
       p.tagline && el('p', { class: 'p-tagline' }, phrases(p.tagline)),
