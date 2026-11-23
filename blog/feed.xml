@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="th">
+  <title>บทความ Local AI ภาษาไทย — Srida.ai</title>
+  <id>https://srida.ai/blog/</id>
+  <link rel="alternate" type="text/html" href="https://srida.ai/blog/"/>
+  <link rel="self" type="application/atom+xml" href="https://srida.ai/blog/feed.xml"/>
+  <updated>2026-11-20T09:00:00+07:00</updated>
+  <author><name>Srida.ai</name></author>
+  <entry>
+    <title>วางระบบ AI ในองค์กรอย่างไร ให้ข้อมูลไม่ออกนอกองค์กร</title>
+    <id>https://srida.ai/blog/private-ai-in-organisation/</id>
+    <link rel="alternate" type="text/html" href="https://srida.ai/blog/private-ai-in-organisation/"/>
+    <published>2026-11-20T09:00:00+07:00</published>
+    <updated>2026-11-20T09:00:00+07:00</updated>
+    <summary type="text">คู่มือวางระบบ AI ในองค์กรทีละขั้น: สำรวจว่าพนักงานใช้ AI อะไรกับข้อมูลแบบไหน จัดชั้นข้อมูล เลือกงานแรก เลือกที่วางระบบ ตั้งสิทธิ์ เขียนนโยบาย และมุมของ PDPA</summary>
+    <category term="guide" label="คู่มือ"/><category term="privacy" label="ข้อมูลและ PDPA"/>
+  </entry>
+  <entry>
+    <title>ถอดเสียงภาษาไทยในเครื่อง โดยไฟล์เสียงไม่ออกนอกองค์กร</title>
+    <id>https://srida.ai/blog/thai-speech-to-text/</id>
+    <link rel="alternate" type="text/html" href="https://srida.ai/blog/thai-speech-to-text/"/>
+    <published>2026-11-20T09:00:00+07:00</published>
+    <updated>2026-11-20T09:00:00+07:00</updated>
+    <summary type="text">ถอดเสียงภาษาไทยในเครื่องขององค์กร เสียงประชุมและสายลูกค้าไม่ต้องส่งออกไปข้างนอก อธิบายการถอดจากไฟล์กับถอดแบบสด วิธีเตรียมเสียงให้ถอดได้ดี และวิธีทดสอบก่อนใช้จริง</summary>
+    <category term="guide" label="คู่มือ"/><category term="speech" label="งานเสียง"/>
+  </entry>
+  <entry>
+    <title>Local AI คืออะไร และรัน AI ในเครื่องได้อย่างไร</title>
+    <id>https://srida.ai/blog/what-is-local-ai/</id>
+    <link rel="alternate" type="text/html" href="https://srida.ai/blog/what-is-local-ai/"/>
+    <published>2026-11-20T09:00:00+07:00</published>
+    <updated>2026-11-20T09:00:00+07:00</updated>
+    <summary type="text">Local AI คือการรัน AI บนเครื่องของคุณเอง ข้อมูลจึงไม่ออกไปข้างนอก อธิบายความต่างจาก AI บนคลาวด์ ประโยชน์ ข้อจำกัด และเครื่องที่ต้องใช้ แบบเข้าใจง่าย</summary>
+    <category term="basics" label="พื้นฐาน"/>
+  </entry>
+</feed>

@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ถอดเสียงภาษาไทยในเครื่อง เสียงไม่ออกนอกองค์กร — Srida.ai</title>
+<meta name="description" content="ถอดเสียงภาษาไทยในเครื่องขององค์กร เสียงประชุมและสายลูกค้าไม่ต้องส่งออกไปข้างนอก อธิบายการถอดจากไฟล์กับถอดแบบสด วิธีเตรียมเสียงให้ถอดได้ดี และวิธีทดสอบก่อนใช้จริง">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://srida.ai/blog/thai-speech-to-text/">
+<link rel="alternate" hreflang="th" href="https://srida.ai/blog/thai-speech-to-text/">
+<link rel="alternate" hreflang="x-default" href="https://srida.ai/blog/thai-speech-to-text/">
+<link rel="alternate" type="application/atom+xml" title="Srida.ai" href="https://srida.ai/blog/feed.xml">
+<meta name="theme-color" content="#fff4ec">
+<meta name="color-scheme" content="light">
+<meta property="og:site_name" content="Srida.ai">
+<meta property="og:locale" content="th_TH">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://srida.ai/blog/thai-speech-to-text/">
+<meta property="og:title" content="ถอดเสียงภาษาไทยในเครื่อง เสียงไม่ออกนอกองค์กร — Srida.ai">
+<meta property="og:description" content="ถอดเสียงภาษาไทยในเครื่องขององค์กร เสียงประชุมและสายลูกค้าไม่ต้องส่งออกไปข้างนอก อธิบายการถอดจากไฟล์กับถอดแบบสด วิธีเตรียมเสียงให้ถอดได้ดี และวิธีทดสอบก่อนใช้จริง">
+<meta property="og:image" content="https://srida.ai/og/blog/thai-speech-to-text.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ถอดเสียงภาษาไทยในเครื่อง โดยไฟล์เสียงไม่ออกนอกองค์กร">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ถอดเสียงภาษาไทยในเครื่อง เสียงไม่ออกนอกองค์กร — Srida.ai">
+<meta name="twitter:description" content="ถอดเสียงภาษาไทยในเครื่องขององค์กร เสียงประชุมและสายลูกค้าไม่ต้องส่งออกไปข้างนอก อธิบายการถอดจากไฟล์กับถอดแบบสด วิธีเตรียมเสียงให้ถอดได้ดี และวิธีทดสอบก่อนใช้จริง">
+<meta name="twitter:image" content="https://srida.ai/og/blog/thai-speech-to-text.png">
+<meta property="article:published_time" content="2026-11-20T09:00:00+07:00">
+<meta property="article:modified_time" content="2026-11-20T09:00:00+07:00">
+<meta property="article:section" content="คู่มือ">
+<meta property="article:tag" content="คู่มือ">
+<meta property="article:tag" content="งานเสียง">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64">
+<link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16">
+<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/favicon-48x48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/prompt-600-thai.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/prompt-400-thai.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/outfit-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/styles.css">
+<script type="module" src="/js/blog.js"></script>
+<noscript><style>.show-panel[hidden]{display:grid!important}.show-tabs,.feature,[data-products],.quiz-progress,.quiz .meter{display:none}.quiz .level[hidden]{display:block!important}</style></noscript>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://srida.ai/#org","name":"Srida.ai","url":"https://srida.ai/","logo":{"@type":"ImageObject","url":"https://srida.ai/assets/icons/icon-512.png","width":512,"height":512},"slogan":"ผู้นำด้าน Local AI ในประเทศไทย","description":"Srida.ai ติดตั้ง AI ที่รันบนเครื่องหรือเซิร์ฟเวอร์ขององค์กร ครบ 5 ด้าน: LLM ถอดเสียง แปลงข้อความเป็นเสียง แปลภาษา และอ่านภาพ (OCR) สำหรับงานภาษาไทย","areaServed":{"@type":"Country","name":"Thailand"},"knowsLanguage":["th","en"]},{"@type":"BlogPosting","@id":"https://srida.ai/blog/thai-speech-to-text/#post","headline":"ถอดเสียงภาษาไทยในเครื่อง โดยไฟล์เสียงไม่ออกนอกองค์กร","description":"ถอดเสียงภาษาไทยในเครื่องขององค์กร เสียงประชุมและสายลูกค้าไม่ต้องส่งออกไปข้างนอก อธิบายการถอดจากไฟล์กับถอดแบบสด วิธีเตรียมเสียงให้ถอดได้ดี และวิธีทดสอบก่อนใช้จริง","image":["https://srida.ai/og/blog/thai-speech-to-text.png"],"datePublished":"2026-11-20T09:00:00+07:00","dateModified":"2026-11-20T09:00:00+07:00","author":{"@id":"https://srida.ai/#org"},"publisher":{"@id":"https://srida.ai/#org"},"mainEntityOfPage":"https://srida.ai/blog/thai-speech-to-text/","inLanguage":"th","articleSection":"คู่มือ","keywords":"คู่มือ, งานเสียง","isPartOf":{"@id":"https://srida.ai/blog/#blog"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"หน้าแรก","item":"https://srida.ai/"},{"@type":"ListItem","position":2,"name":"บทความ","item":"https://srida.ai/blog/"},{"@type":"ListItem","position":3,"name":"ถอดเสียงภาษาไทยในเครื่อง โดยไฟล์เสียงไม่ออกนอกองค์กร","item":"https://srida.ai/blog/thai-speech-to-text/"}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">ข้ามไปเนื้อหา</a>
+<header class="bar" id="bar">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/logo-224.webp" srcset="/assets/logo-112.webp 112w, /assets/logo-224.webp 224w, /assets/logo-336.webp 336w" sizes="112px" alt="Srida.ai" width="112" height="30"></a>
+    <nav class="nav" id="nav" aria-label="เมนูหลัก"><ul><li><a href="/#products">AI 5 ด้าน</a></li><li><a href="/#risks">ความเสี่ยง</a></li><li><a href="/#risk-check">เช็กความเสี่ยง</a></li><li><a href="/pricing/">ราคา</a></li><li><a href="/blog/" aria-current="page">บทความ</a></li><li><a href="/products/">ร้านค้า</a></li></ul></nav>
+    <a class="btn btn--s bar-cta" href="/#contact">ติดต่อทีมงาน</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="เปิดเมนู"><span></span><span></span></button>
+  </div>
+</header>
+<main id="main">
+
+<div class="wrap"><nav class="crumb" aria-label="ตำแหน่งหน้า"><ol><li><a href="/">หน้าแรก</a></li><li><a href="/blog/">บทความ</a></li><li><a href="/blog/thai-speech-to-text/" aria-current="page"><span class="tw"><span class="nw">ถอดเสียง</span><span class="nw">ภาษาไทย</span>ในเครื่อง โดยไฟล์เสียงไม่ออกนอก<span class="nw">องค์กร</span></span></a></li></ol></nav></div>
+<article class="wrap" aria-labelledby="h-art">
+  <header class="art-head">
+    <p class="art-tags"><span class="btag">คู่มือ</span> <span class="btag">งานเสียง</span></p>
+    <h1 class="t-h1" id="h-art"><span class="tw"><span class="nw">ถอดเสียง</span><span class="nw">ภาษาไทย</span>ในเครื่อง โดยไฟล์เสียงไม่ออกนอก<span class="nw">องค์กร</span></span></h1>
+    <p class="lead"><span class="tw"><span class="nw">ถอดเสียง</span><span class="nw">ภาษาไทย</span>ในเครื่องของ<span class="nw">องค์กร</span> เสียง<span class="nw">ประชุม</span>และสายลูกค้าไม่ต้องส่งออกไปข้างนอก อธิบายการถอดจากไฟล์กับถอดแบบสด วิธีเตรียมเสียงให้ถอดได้ดี และวิธีทดสอบก่อนใช้จริง</span></p>
+    <p class="art-meta"><span>โดยทีม Srida.ai</span><span>เผยแพร่ <time datetime="2026-11-20T09:00:00+07:00">20 พ.ย. 2569</time></span><span>อ่าน 7 นาที</span></p>
+  </header>
+  
+  <div class="art art--toc">
+    <nav class="toc toc--side" aria-label="ในบทความนี้"><h2>ในบทความนี้</h2><ol><li><a href="#why"><span class="tw">ทำไมต้อง<span class="nw">ถอดเสียง</span>ในเครื่อง</span></a></li><li><a href="#what"><span class="tw">ระบบ<span class="nw">ถอดเสียง</span>ทำอะไรให้คุณ</span></a></li><li><a href="#batch-or-live">ถอดจากไฟล์ หรือถอดแบบสด</a></li><li><a href="#audio">เตรียมเสียงอย่างไรให้ถอดได้ดี</a></li><li><a href="#test">ทดสอบกับเสียงจริงก่อนตัดสินใจ</a></li><li><a href="#summary"><span class="tw">ต่อยอด: สรุปการ<span class="nw">ประชุม</span>จาก<span class="nw">ข้อความ</span>ที่ถอดได้</span></a></li><li><a href="#rules">เรื่องที่ควรตกลงกันก่อนใช้จริง</a></li></ol></nav><details class="toc toc--fold"><summary>ในบทความนี้ · 7 หัวข้อ</summary><ol><li><a href="#why"><span class="tw">ทำไมต้อง<span class="nw">ถอดเสียง</span>ในเครื่อง</span></a></li><li><a href="#what"><span class="tw">ระบบ<span class="nw">ถอดเสียง</span>ทำอะไรให้คุณ</span></a></li><li><a href="#batch-or-live">ถอดจากไฟล์ หรือถอดแบบสด</a></li><li><a href="#audio">เตรียมเสียงอย่างไรให้ถอดได้ดี</a></li><li><a href="#test">ทดสอบกับเสียงจริงก่อนตัดสินใจ</a></li><li><a href="#summary"><span class="tw">ต่อยอด: สรุปการ<span class="nw">ประชุม</span>จาก<span class="nw">ข้อความ</span>ที่ถอดได้</span></a></li><li><a href="#rules">เรื่องที่ควรตกลงกันก่อนใช้จริง</a></li></ol></details>
+    <div class="art-body"><section id="why" aria-labelledby="h-why"><h2 id="h-why"><span class="tw">ทำไมต้อง<span class="nw">ถอดเสียง</span>ในเครื่อง</span></h2>
+<p><span class="tw">ลองนึกถึงไฟล์เสียงที่<span class="nw">องค์กร</span>ของคุณมี เสียง<span class="nw">ประชุม</span>ผู้บริหาร สายสนทนากับลูกค้า บันทึกของแพทย์ ในเสียงเหล่านี้มีทั้งชื่อคน เบอร์โทร ตัวเลขการเงิน และเรื่องที่คนนอกห้องไม่ควรได้ยิน</span></p>
+<p><span class="tw">ถ้า<span class="nw">ถอดเสียง</span>ด้วยบริการบน<span class="nw">คลาวด์</span> ไฟล์เสียงทั้งไฟล์ต้องถูกส่งออกไป<span class="nw">ประมวลผล</span>ข้างนอก การ<span class="nw">ถอดเสียง</span>ในเครื่องของ<span class="nw">องค์กร</span>ตัดขั้นนั้นทิ้ง เสียงเข้าที่เครื่องของคุณ <span class="nw">ข้อความ</span>ออกจากเครื่องของคุณ จบอยู่ในนั้น</span></p>
+<p>อีกเรื่องคืองบ เมื่อมีเครื่องแล้ว จะถอดกี่ไฟล์ก็ไม่มีค่าบริการตามจำนวนนาที</p>
+</section><section id="what" aria-labelledby="h-what"><h2 id="h-what"><span class="tw">ระบบ<span class="nw">ถอดเสียง</span>ทำอะไรให้คุณ</span></h2>
+<p><span class="tw">ระบบ<span class="nw">ถอดเสียง</span> หรือ ASR (Automatic Speech Recognition) รับเสียงพูดเข้าไป แล้วคืนออกมาเป็น<span class="nw">ข้อความ</span>ที่ค้นหา คัดลอก และแก้ไขได้ ระบบของเราชื่อ</span> <a href="%EE%80%80asr:url%EE%80%81"><span class="nw">Srida Yin</span></a> <span class="tw">ทำงานบนเครื่องของ<span class="nw">องค์กร</span>คุณ <span class="nw">ติดตั้ง</span>เสร็จแล้วใช้ได้โดยไม่ต้องต่อ<span class="nw">อินเทอร์เน็ต</span></span></p>
+<p><span class="tw">งานที่เหมาะกับการ<span class="nw">ถอดเสียง</span> เช่น</span></p>
+<ul>
+<li><p><span class="tw">ทำรายงานการ<span class="nw">ประชุม</span>จากไฟล์บันทึกเสียง</span></li>
+<li><p><span class="tw">แปลงสายสนทนากับลูกค้าเป็น<span class="nw">ข้อความ</span> เพื่อค้นหาและตรวจ<span class="nw">คุณภาพ</span></span></li>
+<li><p>ทำคำบรรยายให้คลิปอบรมหรือวิดีโอภายใน</li>
+<li><p>จดบันทึกด้วยเสียงแทนการพิมพ์</li>
+</ul>
+</section><section id="batch-or-live" aria-labelledby="h-batch-or-live"><h2 id="h-batch-or-live">ถอดจากไฟล์ หรือถอดแบบสด</h2>
+<p><span class="tw">การ<span class="nw">ถอดเสียง</span>มีสองแบบ งานของคุณเป็นแบบไหน ตอบได้ด้วยคำถามเดียว คือ ต้องเห็น<span class="nw">ข้อความ</span>เดี๋ยวนั้นเลยหรือเปล่า</span></p>
+<div class="tbl" tabindex="0" role="region" aria-label="ถอดจากไฟล์ หรือถอดแบบสด"><table><thead>
+<tr>
+<th scope="col">เรื่อง</th>
+<th scope="col">ถอดจากไฟล์</th>
+<th scope="col">ถอดแบบสด</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ใช้เมื่อ</td>
+<td><span class="tw">มีไฟล์ที่บันทึกไว้แล้ว เช่น เสียง<span class="nw">ประชุม</span> คลิป สายสนทนาย้อนหลัง</span></td>
+<td><span class="tw">ต้องเห็น<span class="nw">ข้อความ</span>ระหว่างที่คนกำลังพูด เช่น คำบรรยายสด หรือพิมพ์ด้วยเสียง</span></td>
+</tr>
+<tr>
+<td>สิ่งที่สำคัญ</td>
+<td><span class="tw">ความถูกต้องของ<span class="nw">ข้อความ</span> รอได้</span></td>
+<td><span class="tw">ความหน่วงต่ำ <span class="nw">ข้อความ</span>ต้องขึ้นทันคำพูด</span></td>
+</tr>
+<tr>
+<td>วิธีทำงาน</td>
+<td>ระบบได้ฟังทั้งไฟล์ จึงใช้บริบทของทั้งประโยคช่วย</td>
+<td>ระบบถอดไปทีละช่วงสั้น ๆ ตามเสียงที่เข้ามา</td>
+</tr>
+</tbody>
+</table></div>
+<p>ถ้ายังไม่แน่ใจ เริ่มจากถอดจากไฟล์ก่อน เพราะเตรียมง่ายกว่าและตรวจผลได้สบายกว่า บอกเราว่างานของคุณเป็นแบบไหน เราจะทดสอบกับเสียงจริงของคุณให้ดู</p>
+</section><section id="audio" aria-labelledby="h-audio"><h2 id="h-audio">เตรียมเสียงอย่างไรให้ถอดได้ดี</h2>
+<p><span class="tw">ระบบ<span class="nw">ถอดเสียง</span>เก่งแค่ไหนก็ถอดได้เท่าที่ได้ยิน เสียงต้นทางที่ดีช่วยได้มากกว่าที่คิด และส่วนใหญ่ไม่ต้องซื้ออะไรเพิ่ม</span></p>
+<ul>
+<li><p><strong><span class="tw">วาง<span class="nw">ไมโครโฟน</span>ใกล้คนพูด</span></strong> <span class="tw"><span class="nw">ไมโครโฟน</span>ตัวเดียวกลางโต๊ะที่ทุกคนนั่งห่าง สู้<span class="nw">ไมโครโฟน</span>ใกล้ปากไม่ได้</span></li>
+<li><p><strong>ลดเสียงรบกวน</strong> <span class="tw">ปิดประตู ปิดพัดลมที่ดังเกินจำเป็น และอย่าเคาะโต๊ะใกล้<span class="nw">ไมโครโฟน</span></span></li>
+<li><p><strong>พูดทีละคน</strong> เสียงที่พูดซ้อนกันเป็นงานยากของทุกระบบ และของคนจดด้วย</li>
+<li><p><strong>ทำรายการคำเฉพาะ</strong> <span class="tw">ชื่อคน ชื่อสินค้า ศัพท์เฉพาะวงการ และคำ<span class="nw">ภาษาอังกฤษ</span>ที่ใช้ปนบ่อย คนตรวจจะแก้ได้เร็วขึ้น และเราใช้รายการนี้ตอนทดสอบด้วย</span></li>
+<li><p><strong>เก็บไฟล์ต้นฉบับไว้</strong> อย่าบีบอัดหรือแปลงไฟล์หลายทอดก่อนถอด</li>
+</ul>
+</section><section id="test" aria-labelledby="h-test"><h2 id="h-test">ทดสอบกับเสียงจริงก่อนตัดสินใจ</h2>
+<p>อย่าตัดสินจากคลิปสาธิตที่อัดในห้องเงียบ รวมถึงของเราด้วย เสียงชัด ๆ ถอดง่ายเสมอ สิ่งที่ต้องรู้คือระบบทำได้แค่ไหนกับเสียงของคุณ</p>
+<ol>
+<li><p><span class="tw">เลือกไฟล์เสียงจริงสามถึงห้าไฟล์ ให้มีทั้งแบบที่เสียงดี และแบบที่ยากที่สุดที่คุณเจอ เช่น <span class="nw">ประชุม</span>ที่คนพูดเยอะ หรือสายโทรศัพท์ที่เสียงขาดหาย</span></li>
+<li><p>ให้คนถอดความช่วงสั้น ๆ ของแต่ละไฟล์ไว้เป็นเฉลย</li>
+<li><p>ถอดด้วยระบบ แล้วเทียบกับเฉลย ดูว่าผิดตรงไหน ผิดที่คำทั่วไป หรือผิดที่ชื่อและตัวเลขซึ่งสำคัญกับงาน</li>
+<li><p><span class="tw">ตัดสินจากงานจริง ถ้าคนตรวจแก้<span class="nw">ข้อความ</span>ที่ได้เร็วกว่าพิมพ์ใหม่ทั้งหมดอย่างชัดเจน ก็คุ้ม</span></li>
+</ol>
+<p><span class="tw">ขั้นนี้เราทำร่วมกับคุณ เราทดสอบกับ<span class="nw">ตัวอย่าง</span>เสียงจริงของคุณก่อน แล้วดูผลด้วยกัน ถ้าผลยังไม่ถึงระดับที่งานของคุณต้องการ เราจะบอกตรง ๆ</span></p>
+</section><section id="summary" aria-labelledby="h-summary"><h2 id="h-summary"><span class="tw">ต่อยอด: สรุปการ<span class="nw">ประชุม</span>จาก<span class="nw">ข้อความ</span>ที่ถอดได้</span></h2>
+<p><span class="tw"><span class="nw">ข้อความ</span>ดิบจากการ<span class="nw">ประชุม</span>หนึ่งชั่วโมงยาวจนไม่มีใครอยากอ่าน ขั้นต่อไปคือส่ง<span class="nw">ข้อความ</span>นั้นให้</span> <a href="%EE%80%80llm:url%EE%80%81"><span class="nw">Srida Khuet</span></a> <span class="tw">ช่วยสรุปเป็นรายงานการ<span class="nw">ประชุม</span> พร้อมรายการงานที่ต้องทำ</span></p>
+<p><span class="tw">ทั้งสองระบบทำงานอยู่ในเครื่องของ<span class="nw">องค์กร</span>เหมือนกัน เสียงกลายเป็น<span class="nw">ข้อความ</span> <span class="nw">ข้อความ</span>กลายเป็นสรุป โดยไม่มีขั้นไหนต้องออกไปข้างนอก ถ้าต้องส่งสรุปให้คู่ค้าต่างชาติ ก็ต่อด้วย</span> <a href="%EE%80%80mt:url%EE%80%81"><span class="nw">Srida Khua</span></a> ได้อีกทอด</p>
+<div class="callout"><p><span class="tw">สรุปจาก AI เป็นร่างแรกที่ดี แต่ยังเป็นเพียงฉบับร่าง ให้คนที่อยู่ในที่<span class="nw">ประชุม</span>อ่านทวนก่อนส่งต่อทุกครั้ง</span></p>
+</div>
+</section><section id="rules" aria-labelledby="h-rules"><h2 id="h-rules">เรื่องที่ควรตกลงกันก่อนใช้จริง</h2>
+<ul>
+<li><p><strong><span class="tw">บอกผู้ร่วม<span class="nw">ประชุม</span>ว่ามีการบันทึกเสียง</span></strong> <span class="tw">เสียงพูดมักมี<span class="nw">ข้อมูล</span><span class="nw">ส่วนบุคคล</span>อยู่ในนั้น บอกทุกคนก่อนว่ามีการบันทึกและ<span class="nw">ถอดเสียง</span> และจะนำไปใช้ทำอะไร ส่วนต้องขอ<span class="nw">ความยินยอม</span>แบบไหน ให้ถาม DPO หรือที่ปรึกษากฎหมายของ<span class="nw">องค์กร</span></span></li>
+<li><p><strong><span class="tw">ใครเปิดไฟล์เสียงและ<span class="nw">ข้อความ</span>ได้</span></strong> <span class="tw">กำหนดสิทธิ์ตั้งแต่วันแรก <span class="nw">ข้อความ</span>ที่ถอดแล้วค้นหาง่ายกว่าไฟล์เสียงมาก จึงต้องดูแลไม่น้อยกว่ากัน</span></li>
+<li><p><strong>เก็บไว้นานเท่าไร</strong> <span class="tw">ตกลงกันว่าไฟล์เสียงและ<span class="nw">ข้อความ</span>จะเก็บนานแค่ไหน และใครเป็นคนลบ</span></li>
+<li><p><strong>ใครตรวจก่อนใช้</strong> <span class="tw"><span class="nw">ข้อความ</span>ที่ถอดได้อาจมีคำผิด <span class="nw">เอกสาร</span>ที่เป็นทางการต้องมีคนอ่านทวน</span></li>
+</ul>
+<p><span class="tw">การ<span class="nw">ถอดเสียง</span>ในเครื่องช่วยลดจุดที่<span class="nw">ข้อมูล</span>ออกนอก<span class="nw">องค์กร</span> แต่ไม่ได้ทำให้<span class="nw">องค์กร</span>ปฏิบัติตาม PDPA ครบโดยอัตโนมัติ เราสรุปเรื่องนี้ไว้ที่</span> <a href="/#pdpa">หัวข้อ PDPA ในหน้าแรก</a> พร้อมแหล่งอ้างอิงท้ายหน้านั้น</p>
+<p>พร้อมลองแล้ว <a href="#contact">เล่าโจทย์ให้เราฟัง</a> <span class="tw">แล้วเตรียมไฟล์เสียง<span class="nw">ตัวอย่าง</span>ไว้ได้เลย</span></p>
+</section>
+      <div class="share" data-share><p>แชร์บทความนี้</p><button class="btn btn--ghost btn--s" type="button" data-copy><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8.5" y="8.5" width="11" height="11" rx="2"/><path d="M15.5 8.5V6.5a2 2 0 0 0-2-2h-7a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h2"/></svg><span>คัดลอกลิงก์</span></button><button class="btn btn--ghost btn--s" type="button" data-native hidden>แชร์</button><span class="sr-only" role="status" data-live></span></div>
+      <aside class="prod-card" aria-labelledby="h-prod"><div class="prod-pic"><span class="disc" aria-hidden="true"><picture><source type="image/avif" srcset="/assets/mascot/disc/baksida-asr-360.avif 360w, /assets/mascot/disc/baksida-asr-720.avif 720w, /assets/mascot/disc/baksida-asr-1080.avif 1080w" sizes="120px"><img src="/assets/mascot/disc/baksida-asr-720.webp" srcset="/assets/mascot/disc/baksida-asr-360.webp 360w, /assets/mascot/disc/baksida-asr-720.webp 720w, /assets/mascot/disc/baksida-asr-1080.webp 1080w" sizes="120px" width="720" height="720" alt="" loading="lazy" decoding="async"></picture></span></div><div><h2 class="t-h3" id="h-prod">ระบบที่เกี่ยวกับเรื่องนี้</h2><p class="prod-name"><b><span class="nw">Srida Yin</span></b> <span><span class="tw"><span class="nw">ถอดเสียง</span>เป็น<span class="nw">ข้อความ</span></span></span></p><p class="prod-act"><a class="btn btn--flesh" href="/yin/">ดู <span class="nw">Srida Yin</span></a><a class="link" href="/pricing/">ดูราคาและแพ็กเกจ</a></p></div></aside>
+      <aside class="art-foot" aria-labelledby="h-more-art"><h2 id="h-more-art">อ่านต่อ</h2><ul><li><a href="/blog/private-ai-in-organisation/"><span class="tw">วางระบบ AI ใน<span class="nw">องค์กร</span>อย่างไร ให้<span class="nw">ข้อมูล</span>ไม่ออกนอก<span class="nw">องค์กร</span></span></a></li><li><a href="/blog/what-is-local-ai/"><span class="tw"><span class="nw">Local AI</span> คืออะไร และรัน AI ในเครื่องได้อย่างไร</span></a></li><li><a href="/blog/">บทความทั้งหมด</a></li></ul></aside>
+    </div>
+  </div>
+</article>
+<section class="sec" id="contact" aria-labelledby="h-contact">
+  <div class="wrap">
+    <div class="cta-band">
+      <div class="cta-copy">
+        <h2 class="t-h2" id="h-contact">เล่าโจทย์ให้ฟังหน่อย เดี๋ยวเราช่วยเลือก AI ที่พอดีกับงาน</h2>
+        <ul class="ticks">
+          <li><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span class="tw">อยากให้ AI ช่วยงานอะไร เช่น <span class="nw">ถอดเสียง</span><span class="nw">ประชุม</span> หรือถามตอบ<span class="nw">เอกสาร</span></span></li>
+          <li><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span class="tw"><span class="nw">ข้อมูล</span>เป็นแบบไหน อยู่ที่ไหนบ้าง</span></li>
+          <li><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span class="tw">มีเครื่องหรือ<span class="nw">เซิร์ฟเวอร์</span>อะไรอยู่แล้วบ้าง</span></li>
+        </ul>
+        <div class="cta-actions">
+          <a class="btn btn--flesh" data-contact aria-disabled="true">ช่องทางติดต่อเปิดเร็ว ๆ นี้</a>
+          <a class="link" href="/products/">ดูสินค้าและบริการ</a>
+        </div>
+      </div>
+      <div class="cta-pic"><p class="bubble">เล่าได้เลย เราฟังอยู่เด้อ</p><span class="disc" data-clip="wave"><picture><source type="image/avif" srcset="/assets/mascot/disc/baksida-wave-360.avif 360w, /assets/mascot/disc/baksida-wave-720.avif 720w, /assets/mascot/disc/baksida-wave-1080.avif 1080w" sizes="(min-width: 900px) 280px, 190px"><img src="/assets/mascot/disc/baksida-wave-720.webp" srcset="/assets/mascot/disc/baksida-wave-360.webp 360w, /assets/mascot/disc/baksida-wave-720.webp 720w, /assets/mascot/disc/baksida-wave-1080.webp 1080w" sizes="(min-width: 900px) 280px, 190px" width="720" height="720" alt="บักสีดาโบกมือทักทาย" loading="lazy" decoding="async"></picture></span></div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="foot dark">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand"><a href="/"><img src="/assets/logo-on-dark-280.webp" srcset="/assets/logo-on-dark-140.webp 140w, /assets/logo-on-dark-280.webp 280w, /assets/logo-on-dark-420.webp 420w" sizes="140px" alt="Srida.ai" width="140" height="37" loading="lazy"></a><p>ผู้นำด้าน Local AI ในประเทศไทย ติดตั้ง AI ภาษาไทยให้ทำงานบนเครื่องและในองค์กรของคุณ</p></div>
+      <nav class="foot-cols" aria-label="ลิงก์ท้ายหน้า">
+        <div><h2>AI 5 ด้าน</h2><ul><li><a href="/khuet/">Srida Khuet · LLM</a></li><li><a href="/yin/">Srida Yin · ASR</a></li><li><a href="/wao/">Srida Wao · TTS</a></li><li><a href="/khua/">Srida Khua · MT</a></li><li><a href="/berng/">Srida Berng · Vision</a></li></ul></div>
+        <div><h2>เรียนรู้</h2><ul><li><a href="/blog/what-is-local-ai/">Local AI คืออะไร</a></li><li><a href="/blog/private-ai-in-organisation/">วางระบบ AI ในองค์กร</a></li><li><a href="/blog/thai-speech-to-text/">ถอดเสียงในเครื่อง</a></li><li><a href="/blog/">บทความทั้งหมด</a></li><li><a href="/#faq">คำถามที่พบบ่อย</a></li></ul></div>
+        <div><h2>Srida.ai</h2><ul><li><a href="/products/">สินค้าและบริการ</a></li><li><a href="/pricing/">ราคาและแพ็กเกจ</a></li><li><a href="/#industries">อุตสาหกรรม</a></li><li><a href="/brand/">ชุดแบรนด์</a></li><li><a href="/#contact">ติดต่อทีมงาน</a></li></ul></div>
+      </nav>
+    </div>
+    <p class="foot-legal">© 2026 Srida.ai</p>
+  </div>
+</footer>
+<aside class="fold-pane" aria-label="Srida.ai"><div class="fold-card"><div class="stage "><span class="disc" data-clip="wave"><picture><source type="image/avif" srcset="/assets/mascot/disc/baksida-wave-360.avif 360w, /assets/mascot/disc/baksida-wave-720.avif 720w, /assets/mascot/disc/baksida-wave-1080.avif 1080w" sizes="(horizontal-viewport-segments: 2) 32vw, 1px"><img src="/assets/mascot/disc/baksida-wave-720.webp" srcset="/assets/mascot/disc/baksida-wave-360.webp 360w, /assets/mascot/disc/baksida-wave-720.webp 720w, /assets/mascot/disc/baksida-wave-1080.webp 1080w" sizes="(horizontal-viewport-segments: 2) 32vw, 1px" width="720" height="720" alt="บักสีดา มาสคอตของ Srida.ai" loading="lazy" decoding="async"></picture></span></div><p class="fold-tag"><span class="nw">Local AI</span> <span class="nw">ภาษาไทย</span> <span class="nw">ที่ทำงาน</span><span class="tw">ใน<span class="nw">องค์กร</span>ของคุณ</span></p><p class="fold-cta"><a class="btn btn--flesh" href="/#contact"><span class="tw">ติดต่อ<span class="nw">ทีมงาน</span></span></a><a class="btn btn--ghost" href="/#products">ดู AI ทั้ง 5 ด้าน</a></p><ul class="fold-lines"><li><a href="/khuet/"><span class="ico ico--llm ico--s" aria-hidden="true"><picture class="ico-pic"><source type="image/avif" srcset="/assets/mascot/baksida-llm-360.avif 360w, /assets/mascot/baksida-llm-720.avif 720w" sizes="64px"><img src="/assets/mascot/baksida-llm-720.webp" srcset="/assets/mascot/baksida-llm-360.webp 360w, /assets/mascot/baksida-llm-720.webp 720w" sizes="64px" width="720" height="807" alt="" loading="lazy" decoding="async"></picture></span><b><span class="nw">Srida Khuet</span></b></a></li><li><a href="/yin/"><span class="ico ico--asr ico--s" aria-hidden="true"><picture class="ico-pic"><source type="image/avif" srcset="/assets/mascot/baksida-asr-360.avif 360w, /assets/mascot/baksida-asr-720.avif 720w" sizes="64px"><img src="/assets/mascot/baksida-asr-720.webp" srcset="/assets/mascot/baksida-asr-360.webp 360w, /assets/mascot/baksida-asr-720.webp 720w" sizes="64px" width="720" height="858" alt="" loading="lazy" decoding="async"></picture></span><b><span class="nw">Srida Yin</span></b></a></li><li><a href="/wao/"><span class="ico ico--tts ico--s" aria-hidden="true"><picture class="ico-pic"><source type="image/avif" srcset="/assets/mascot/baksida-tts-360.avif 360w, /assets/mascot/baksida-tts-720.avif 720w" sizes="64px"><img src="/assets/mascot/baksida-tts-720.webp" srcset="/assets/mascot/baksida-tts-360.webp 360w, /assets/mascot/baksida-tts-720.webp 720w" sizes="64px" width="720" height="914" alt="" loading="lazy" decoding="async"></picture></span><b><span class="nw">Srida Wao</span></b></a></li><li><a href="/khua/"><span class="ico ico--mt ico--s" aria-hidden="true"><picture class="ico-pic"><source type="image/avif" srcset="/assets/mascot/baksida-mt-360.avif 360w, /assets/mascot/baksida-mt-720.avif 720w" sizes="64px"><img src="/assets/mascot/baksida-mt-720.webp" srcset="/assets/mascot/baksida-mt-360.webp 360w, /assets/mascot/baksida-mt-720.webp 720w" sizes="64px" width="720" height="692" alt="" loading="lazy" decoding="async"></picture></span><b><span class="nw">Srida Khua</span></b></a></li><li><a href="/berng/"><span class="ico ico--vision ico--s" aria-hidden="true"><picture class="ico-pic"><source type="image/avif" srcset="/assets/mascot/baksida-vision-360.avif 360w, /assets/mascot/baksida-vision-720.avif 720w" sizes="64px"><img src="/assets/mascot/baksida-vision-720.webp" srcset="/assets/mascot/baksida-vision-360.webp 360w, /assets/mascot/baksida-vision-720.webp 720w" sizes="64px" width="720" height="920" alt="" loading="lazy" decoding="async"></picture></span><b><span class="nw">Srida Berng</span></b></a></li></ul></div></aside>
+</body>
+</html>

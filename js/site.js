@@ -141,7 +141,7 @@ function pauseOffscreen() {
   document.querySelectorAll(LOOPS).forEach((el) => { if (!el.parentElement?.closest(LOOPS)) io.observe(el); });
 }
 
-export function initSite() {
+export function initSite({ fx = true } = {}) {
   const settle = () => {
     settlePhrases();
     clearFold();
@@ -236,7 +236,7 @@ export function initSite() {
   // motion is an extra: it starts once the page is idle. บักสีดา's clips play in place (they are not the kind of motion reduced motion
   // is for), so they load under reduced motion too; pointer and scroll motion (fx.js) never runs under it.
   const start = () => {
-    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) import('./fx.js').then((m) => m.initFx()).catch(() => {});
+    if (fx && !matchMedia('(prefers-reduced-motion: reduce)').matches) import('./fx.js').then((m) => m.initFx()).catch(() => {});
     import('./mascot.js').then((m) => m.initMascot()).catch(() => {});
   };
   if ('requestIdleCallback' in window) requestIdleCallback(start, { timeout: 1500 });
