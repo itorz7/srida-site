@@ -17,26 +17,35 @@
 @font-face{font-family:"Prompt";font-weight:600;font-display:swap;src:url(/fonts/prompt-600-thai.woff2) format("woff2");unicode-range:U+0E01-0E5B,U+200B-200D,U+25CC}
 /* Stand-ins drawn until Prompt and Outfit arrive (B1, F3), scaled so each line takes the width Prompt or Outfit will give it
    and the page does not move when they come.
-   Thai: the system's Noto Sans Thai (Linux, Android), Sukhumvit Set (iPhone, Mac) or FreeSerif (the Chrome of PageSpeed
-   Insights, and Linux without Noto Sans Thai). All of them are rules of one family, "Prompt fallback", lowest priority first
-   (FreeSerif, Sukhumvit Set, Noto): a rule whose font is not installed is skipped, so the last installed one draws. A font's
-   letters are not all wider or narrower than Prompt's by the same amount, so Noto (three) and FreeSerif (six) are split by
-   width into groups with a scale each: the first rule of a font and weight covers all of Thai, the later ones win for their
-   letters, and every group lists the combining marks so a letter and its marks stay in one font. Sukhumvit Set follows
-   Prompt closely enough for one scale per weight. There are no 500 rules: 500 takes the 400 ones, so no weight can fall out
-   of the family. FreeSerif's scales fit this site's text as HarfBuzz shapes it (the h1s weigh most) and were then nudged
-   until no page breaks its lines elsewhere. PageSpeed Insights has FreeSerif Regular only, so the 600 rules name only
-   "FreeSerif" and their scales fit the regular widths; naming FreeSerif Bold would give the bold widths on a machine that has
-   it, which these scales do not fit. A rule declared 600 is not made bold, so headings look regular until Prompt comes.
+   Thai: the system's Noto Sans Thai (Linux, Android), Sukhumvit Set (iPhone, Mac), FreeSerif (the Chrome of PageSpeed
+   Insights, and Linux without Noto Sans Thai) or Tahoma (Windows, where most Thai desktop readers are: t-5585). All of them
+   are rules of one family, "Prompt fallback", lowest priority first (Tahoma, FreeSerif, Sukhumvit Set, Noto): a rule whose
+   font is not installed is skipped, so the last installed one draws (a Mac has Tahoma too; Sukhumvit Set wins there).
+   A font's letters are not all wider or narrower than Prompt's by the same amount, so Noto (three groups), FreeSerif (six)
+   and Tahoma (four, split apart for 400 and for bold) are split by width into groups with a scale each: the first rule of
+   a font and weight covers all of Thai, the later ones win for their letters, and every group lists the combining marks so
+   a letter and its marks stay in one font. Sukhumvit Set follows Prompt closely enough for one scale per weight. There are
+   no 500 rules: 500 takes the 400 ones, so no weight can fall out of the family. The FreeSerif and Tahoma scales fit this
+   site's text as HarfBuzz shapes it (the h1s weigh most); FreeSerif's were then nudged until no page breaks its lines
+   elsewhere. PageSpeed Insights has FreeSerif Regular only, so the 600 rules name only "FreeSerif" and their scales fit the
+   regular widths; naming FreeSerif Bold would give the bold widths on a machine that has it, which these scales do not
+   fit. A rule declared 600 is not made bold, so on PageSpeed Insights headings look regular until Prompt comes.
    The Thai rules set no ascent or descent: none of these fonts has a space, so none is the primary font, and with
    line-height a number only the primary font sets the line box.
    Latin: Roboto (Android), Noto Sans (Linux) or Arial and its metric twin Liberation Sans (Mac, iPhone, Windows, PageSpeed
    Insights). The Noto and Arial scales fit this site's Latin text, which is mostly the spaces between Thai phrases; Noto's
    curly double quotes are a quarter narrower than Outfit's and get a scale of their own.
-   Windows Thai (Tahoma, Leelawadee UI) is not adjusted: four Tahoma groups bring Windows close (3 of 70 cases still move)
-   but cost about 150 B gzip that the home page's CSS budget does not have, and Leelawadee UI could not be measured.
+   On Windows the Tahoma rules draw Thai, so Windows' own Thai fallback (Leelawadee UI) never shows before Prompt.
    Widths come from the real font files (tests/fixtures/thai-system-fonts.json for the Apple and Windows ones);
    tests/font-shift.mjs checks the result on each machine. */
+@font-face{font-family:"Prompt fallback";font-weight:400;src:local("Tahoma");size-adjust:104.3%;unicode-range:U+0E01-0E5B,U+200B-200D,U+25CC}
+@font-face{font-family:"Prompt fallback";font-weight:400;src:local("Tahoma");size-adjust:118.6%;unicode-range:U+0E07,U+0E0D,U+0E12-0E13,U+0E15-0E16,U+0E23-0E24,U+0E27,U+0E2C,U+0E2E,U+0E31,U+0E34-0E3A,U+0E46-0E4E,U+0E51,U+200B-200D,U+25CC}
+@font-face{font-family:"Prompt fallback";font-weight:400;src:local("Tahoma");size-adjust:89.3%;unicode-range:U+0E02,U+0E06,U+0E09-0E0B,U+0E0F,U+0E17,U+0E29,U+0E2B,U+0E31-0E3A,U+0E40-0E41,U+0E47-0E4E,U+0E54-0E55,U+0E58,U+200B-200D,U+25CC}
+@font-face{font-family:"Prompt fallback";font-weight:400;src:local("Tahoma");size-adjust:68.9%;unicode-range:U+0E11,U+0E30-0E31,U+0E34-0E3A,U+0E42-0E44,U+0E47-0E4E,U+0E50,U+200B-200D,U+25CC}
+@font-face{font-family:"Prompt fallback";font-weight:600;src:local("Tahoma Bold"),local("Tahoma-Bold");size-adjust:96.5%;unicode-range:U+0E01-0E5B,U+200B-200D,U+25CC}
+@font-face{font-family:"Prompt fallback";font-weight:600;src:local("Tahoma Bold"),local("Tahoma-Bold");size-adjust:114.7%;unicode-range:U+0E07,U+0E0D,U+0E27,U+0E31,U+0E34-0E3A,U+0E46-0E4E,U+200B-200D,U+25CC}
+@font-face{font-family:"Prompt fallback";font-weight:600;src:local("Tahoma Bold"),local("Tahoma-Bold");size-adjust:65.7%;unicode-range:U+0E30-0E31,U+0E34-0E3A,U+0E42-0E44,U+0E47-0E4E,U+200B-200D,U+25CC}
+@font-face{font-family:"Prompt fallback";font-weight:600;src:local("Tahoma Bold"),local("Tahoma-Bold");size-adjust:84.2%;unicode-range:U+0E02,U+0E06,U+0E09-0E0B,U+0E11,U+0E17-0E18,U+0E20,U+0E2B-0E2C,U+0E31-0E3A,U+0E47-0E4E,U+0E51,U+0E54-0E55,U+0E57-0E59,U+200B-200D,U+25CC}
 @font-face{font-family:"Prompt fallback";font-weight:400;src:local("FreeSerif");size-adjust:117.6%;unicode-range:U+0E01-0E5B,U+200B-200D,U+25CC}
 @font-face{font-family:"Prompt fallback";font-weight:400;src:local("FreeSerif");size-adjust:106.5%;unicode-range:U+0E03,U+0E06,U+0E09,U+0E0B,U+0E0F,U+0E17,U+0E19,U+0E29,U+0E2B-0E2C,U+0E2E,U+0E31-0E3A,U+0E3F-0E41,U+0E47-0E4E,U+0E53-0E55,U+0E58,U+200B-200D,U+25CC}
 @font-face{font-family:"Prompt fallback";font-weight:400;src:local("FreeSerif");size-adjust:125.1%;unicode-range:U+0E02,U+0E08,U+0E0A,U+0E10,U+0E13-0E16,U+0E18,U+0E1E-0E1F,U+0E22,U+0E31,U+0E34-0E3A,U+0E45-0E4E,U+0E50,U+0E52,U+0E56,U+0E59,U+200B-200D,U+25CC}
@@ -766,6 +775,9 @@ tbody th{font-weight:600}
 @media (hover:hover) and (pointer:fine){.chip:hover{color:var(--ink)}.chip[aria-pressed="true"]:hover{color:#fff}}
 .count{margin-left:auto;font-size:.9rem;color:var(--ink-3);font-variant-numeric:tabular-nums}
 .toolbar + .p-grid{margin-top:clamp(24px,3cqi,36px)}
+/* The product page draws its content from the catalog after load. Until then [data-product] holds one screen, so the footer
+   starts below the first screen and does not jump down when the content comes (C3: CLS 0.684 on a phone). */
+[data-product]{min-height:100svh}
 .pd{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);gap:clamp(28px,5cqi,84px);align-items:start;padding-top:clamp(18px,2.4cqi,28px)}
 .pd > *{min-width:0}
 .pd-media{position:sticky;top:92px;aspect-ratio:1;overflow:hidden;background:var(--night);border-radius:var(--r-xl);box-shadow:var(--lift-2)}
