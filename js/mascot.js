@@ -19,9 +19,9 @@ const size = (el) => {
   const need = el.clientWidth * Math.min(window.devicePixelRatio || 1, 2) * (FINE ? 1 : 0.8);
   return SIZES.find((s) => s >= need) || SIZES[SIZES.length - 1];
 };
-const CLIPS = '/assets/mascot/clip/v2/baksida-'; // a new encode goes into a new folder: a clip's URL never changes content
-const file = (name, el) => `${CLIPS}${name}-${size(el)}.webm`;
-const animFile = (name, el) => `${CLIPS}${name}-anim-${size(el)}.webp`;
+const CLIPS = (name) => `/assets/mascot/clip/${name === 'mt' || name === 'asr' ? 'v4' : 'v3'}/baksida-`; // a new encode goes into a new folder: a clip's URL never changes content (v4: mt and asr keyed again)
+const file = (name, el) => `${CLIPS(name)}${name}-${size(el)}.webm`;
+const animFile = (name, el) => `${CLIPS(name)}${name}-anim-${size(el)}.webp`;
 const seen = new Map(); // disc → share of it on screen
 const clips = new WeakMap(); // disc → its looping <video>
 const woken = new WeakSet(); // discs a hover or tap started before the loops start on their own (or on a slow connection)

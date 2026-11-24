@@ -3,20 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#fff4ec" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#251418" media="(prefers-color-scheme: dark)">
+<script>try{var t=localStorage.theme,m=document.querySelectorAll('meta[name=theme-color]');if(t=='light'||t=='dark'){document.documentElement.dataset.theme=t;document.querySelector('meta[name=color-scheme]').content=t;m[0].content=m[1].content=t=='dark'?'#251418':'#fff4ec'}}catch(e){}</script>
 <title>Srida Khuet — LLM ภาษาไทย รันในเครื่อง สำหรับองค์กร</title>
 <link rel="preload" href="/fonts/prompt-600-thai.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/prompt-400-thai.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/outfit-var-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/h/line.ae5efd8be5.css">
-<script type="module" src="/h/page.ad15d57437.js"></script>
-<link rel="modulepreload" href="/h/site.abc6c9035c.js">
+<link rel="stylesheet" href="/h/line.729ea3bf5f.css">
+<script type="module" src="/h/page.a1c8adca5b.js"></script>
+<link rel="modulepreload" href="/h/site.f380099112.js">
 <meta name="description" content="Srida Khuet คือระบบ LLM ภาษาไทยที่ติดตั้งบนเครื่องขององค์กรคุณ ถามตอบจากเอกสาร สรุปรายงาน ร่างหนังสือ ข้อมูลไม่ออกนอกองค์กร ทดสอบกับเอกสารจริงของคุณก่อนติดตั้ง">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://srida.ai/khuet/">
 <link rel="alternate" hreflang="th" href="https://srida.ai/khuet/">
 <link rel="alternate" hreflang="x-default" href="https://srida.ai/khuet/">
-<meta name="theme-color" content="#fff4ec">
-<meta name="color-scheme" content="light">
 <meta property="og:site_name" content="Srida.ai">
 <meta property="og:locale" content="th_TH">
 <meta property="og:type" content="website">
@@ -38,19 +40,19 @@
 <link rel="icon" href="/favicon-48x48.png" type="image/png" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<noscript><style>.show-panel[hidden]{display:grid!important}.show-tabs,[data-filters],.quiz-progress,.quiz .meter{display:none}.quiz .level[hidden]{display:block!important}</style></noscript>
+<noscript><style>.theme-set,.theme-btn{display:none!important}.show-panel[hidden]{display:grid!important}.show-tabs,[data-filters],.quiz-progress,.quiz .meter{display:none}.quiz .level[hidden]{display:block!important}</style></noscript>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://srida.ai/#org","name":"Srida.ai","url":"https://srida.ai/","logo":{"@type":"ImageObject","url":"https://srida.ai/assets/icons/icon-512.png","width":512,"height":512},"slogan":"ผู้นำด้าน Local AI ในประเทศไทย","description":"Srida.ai ติดตั้ง AI ที่รันบนเครื่องหรือเซิร์ฟเวอร์ขององค์กร ครบ 5 ด้าน: LLM ถอดเสียง แปลงข้อความเป็นเสียง แปลภาษา และอ่านภาพ (OCR) สำหรับงานภาษาไทย","areaServed":{"@type":"Country","name":"Thailand"},"knowsLanguage":["th","en"]},{"@type":"Service","@id":"https://srida.ai/khuet/#service","name":"Srida Khuet ระบบ LLM ภาษาไทยสำหรับองค์กร","alternateName":"Srida คึด","description":"Srida Khuet คือระบบ LLM ภาษาไทยที่ติดตั้งบนเครื่องขององค์กรคุณ ถามตอบจากเอกสาร สรุปรายงาน ร่างหนังสือ ข้อมูลไม่ออกนอกองค์กร ทดสอบกับเอกสารจริงของคุณก่อนติดตั้ง","serviceType":"LLM ภาษาไทย","provider":{"@id":"https://srida.ai/#org"},"brand":{"@type":"Brand","name":"Srida.ai"},"areaServed":{"@type":"Country","name":"Thailand"},"url":"https://srida.ai/khuet/","image":"https://srida.ai/og/khuet.png"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"LLM ภาษาไทยตัวไหนดีที่สุด","acceptedAnswer":{"@type":"Answer","text":"ตอบตรง ๆ ว่าไม่มีแบบไหนดีที่สุดสำหรับทุกงาน ผลขึ้นกับลักษณะงาน เอกสารของคุณ และเครื่องที่มี เราจึงเอาเอกสารและคำถามจริงของคุณมาทดสอบก่อน แล้วค่อยตั้งค่า Srida Khuet ให้เข้ากับงานนั้น"}},{"@type":"Question","name":"ใช้ LLM ในเครื่องกับเอกสารลับได้ไหม","acceptedAnswer":{"@type":"Answer","text":"ได้ และนี่คือข้อดีข้อใหญ่ของการรันในเครื่อง เอกสารและคำถามประมวลผลอยู่บนเครื่องขององค์กรคุณ ไม่ได้ส่งไปที่ไหน สิ่งที่ต้องทำเพิ่มคือตั้งสิทธิ์การเข้าถึงให้เหมาะ ซึ่งเราช่วยตั้งให้ตอนติดตั้ง"}},{"@type":"Question","name":"ต้องมีการ์ดจอไหม","acceptedAnswer":{"@type":"Answer","text":"ไม่เสมอไป งานเบาที่ใช้กันไม่กี่คน รันบนคอมพิวเตอร์ที่ไม่มีการ์ดจอได้ แต่จะตอบช้ากว่า ถ้ามีคนใช้พร้อมกันหลายคนหรืองานหนักขึ้น ควรมีการ์ดจอ บอกเราว่ามีเครื่องอะไรอยู่ เราทดสอบแล้วบอกตรง ๆ ว่าพอหรือต้องเพิ่ม"}},{"@type":"Question","name":"Srida Khuet ตอบผิดได้ไหม","acceptedAnswer":{"@type":"Answer","text":"ได้ LLM ทุกระบบตอบผิดได้ และบางครั้งผิดแบบมั่นใจด้วย คำตอบที่มาจากเอกสารองค์กรจึงบอกที่มาว่ามาจากเอกสารไหน ให้คุณเปิดเช็กเองได้ ส่วนงานสำคัญอย่างหนังสือที่จะส่งออก ให้คนตรวจก่อนทุกครั้ง"}},{"@type":"Question","name":"ต่อกับระบบที่องค์กรใช้อยู่ได้ไหม","acceptedAnswer":{"@type":"Answer","text":"ได้ เราเปิด Srida Khuet เป็น API ภายในองค์กร ระบบที่คุณใช้อยู่แล้วเรียกใช้ได้ และตอนติดตั้งเราช่วยเชื่อมให้ จะรับข้อความจากการถอดเสียงหรือ OCR มาสรุปต่อก็ได้ ทุกขั้นตอนอยู่ในเครื่องเดียวกัน"}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"หน้าแรก","item":"https://srida.ai/"},{"@type":"ListItem","position":2,"name":"Srida Khuet · LLM ภาษาไทย","item":"https://srida.ai/khuet/"}]}]}</script>
 </head>
 <body>
 <a class="skip" href="#main">ข้ามไปเนื้อหา</a>
 <header class="bar" id="bar">
   <div class="wrap">
-    <a class="brand" href="/"><img src="/assets/logo-224.webp" srcset="/assets/logo-112.webp 112w, /assets/logo-224.webp 224w, /assets/logo-336.webp 336w" sizes="112px" alt="Srida.ai" width="112" height="30"></a>
-    <nav class="nav" id="nav" aria-label="เมนูหลัก"><ul><li><a href="/#products">AI 5 ด้าน</a></li><li><a href="/#risks">ความเสี่ยง</a></li><li><a href="/#risk-check">เช็กความเสี่ยง</a></li><li><a href="/pricing/">ราคา</a></li><li><a href="/blog/">บทความ</a></li><li><a href="/products/">ร้านค้า</a></li></ul></nav>
-    <a class="btn btn--s bar-cta" href="/#contact">ติดต่อทีมงาน</a>
+    <a class="brand" href="/"><img class="logo-l" src="/assets/logo-224.webp" srcset="/assets/logo-112.webp 112w, /assets/logo-224.webp 224w, /assets/logo-336.webp 336w" sizes="112px" alt="Srida.ai" width="112" height="30" loading="lazy"><img class="logo-d" src="/assets/logo-on-dark-280.webp" srcset="/assets/logo-on-dark-140.webp 140w, /assets/logo-on-dark-280.webp 280w, /assets/logo-on-dark-420.webp 420w" sizes="112px" alt="Srida.ai" width="112" height="30" loading="lazy"></a>
+    <nav class="nav" id="nav" aria-label="เมนูหลัก"><ul><li><a href="/#products">AI 5 ด้าน</a></li><li><a href="/#risks">ความเสี่ยง</a></li><li><a href="/#risk-check">เช็กความเสี่ยง</a></li><li><a href="/pricing/">ราคา</a></li><li><a href="/blog/">บทความ</a></li><li><a href="/products/">ร้านค้า</a></li></ul><fieldset class="theme-set" id="theme-set"><legend>ธีมสี</legend><div class="theme-seg"><label><input type="radio" name="theme" value="auto" checked><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#t-a"/></svg><span>ตามเครื่อง</span><svg class="i ok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#t-k"/></svg></label><label><input type="radio" name="theme" value="light"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#t-l"/></svg><span>สว่าง</span><svg class="i ok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#t-k"/></svg></label><label><input type="radio" name="theme" value="dark"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#t-d"/></svg><span>มืด</span><svg class="i ok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#t-k"/></svg></label></div></fieldset></nav>
+    <button class="theme-btn" type="button" aria-expanded="false" aria-controls="theme-set" aria-label="ธีมสี: ตามเครื่อง"><svg class="i ti-a" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#t-a"/></svg><svg class="i ti-l" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#t-l"/></svg><svg class="i ti-d" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#t-d"/></svg></button><a class="btn btn--s bar-cta" href="/#contact">ติดต่อทีมงาน</a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="เปิดเมนู"><span></span><span></span></button>
   </div>
-</header>
+</header><svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="t-a" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="12" rx="2.2"/><path d="M8.5 20h7M12 16.5V20"/></symbol><symbol id="t-l" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.7"/><path d="M12 2.8v2.1M12 19.1v2.1M2.8 12h2.1M19.1 12h2.1M5.5 5.5L7 7M17 17l1.5 1.5M5.5 18.5L7 17M17 7l1.5-1.5"/></symbol><symbol id="t-d" viewBox="0 0 24 24"><path d="M20.2 14.3A8.2 8.2 0 0 1 9.7 3.8a7.3 7.3 0 1 0 10.5 10.5z"/></symbol><symbol id="t-k" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol></defs></svg>
 <main id="main">
 
 <div class="slab slab--dawn slab--top">

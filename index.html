@@ -3,23 +3,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#fff4ec" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#251418" media="(prefers-color-scheme: dark)">
+<script>try{var t=localStorage.theme,m=document.querySelectorAll('meta[name=theme-color]');if(t=='light'||t=='dark'){document.documentElement.dataset.theme=t;document.querySelector('meta[name=color-scheme]').content=t;m[0].content=m[1].content=t=='dark'?'#251418':'#fff4ec'}}catch(e){}</script>
 <title>Local AI ภาษาไทย รันในเครื่องและในองค์กร — Srida.ai</title>
 <link rel="preload" href="/fonts/prompt-600-thai.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/prompt-400-thai.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/outfit-var-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/h/home.1e42fab12c.css">
-<script type="module" src="/h/home.ac83b96946.js"></script>
-<link rel="modulepreload" href="/h/site.abc6c9035c.js">
+<link rel="stylesheet" href="/h/home.b47170f723.css">
+<script type="module" src="/h/home.b9feb060a4.js"></script>
+<link rel="modulepreload" href="/h/site.f380099112.js">
 <link rel="modulepreload" href="/h/risk.02aaf0afc7.js">
-<link rel="modulepreload" href="/h/shop.be6cc1cb34.js">
+<link rel="modulepreload" href="/h/shop.e1d2c95680.js">
 <meta name="description" content="Srida.ai ติดตั้ง Local AI ภาษาไทยครบ 5 ด้าน ทั้ง LLM ถามตอบ ถอดเสียง สร้างเสียงพูด แปลภาษา และ OCR บนเครื่องขององค์กร ข้อมูลไม่ต้องส่งออกไปข้างนอก">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://srida.ai/">
 <link rel="alternate" hreflang="th" href="https://srida.ai/">
 <link rel="alternate" hreflang="x-default" href="https://srida.ai/">
 <link rel="alternate" type="application/atom+xml" title="Srida.ai" href="https://srida.ai/blog/feed.xml">
-<meta name="theme-color" content="#fff4ec">
-<meta name="color-scheme" content="light">
 <meta property="og:site_name" content="Srida.ai">
 <meta property="og:locale" content="th_TH">
 <meta property="og:type" content="website">
@@ -41,19 +43,19 @@
 <link rel="icon" href="/favicon-48x48.png" type="image/png" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<noscript><style>.show-panel[hidden]{display:grid!important}.show-tabs,[data-filters],.quiz-progress,.quiz .meter{display:none}.quiz .level[hidden]{display:block!important}</style></noscript>
+<noscript><style>.theme-set,.theme-btn{display:none!important}.show-panel[hidden]{display:grid!important}.show-tabs,[data-filters],.quiz-progress,.quiz .meter{display:none}.quiz .level[hidden]{display:block!important}</style></noscript>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://srida.ai/#org","name":"Srida.ai","url":"https://srida.ai/","logo":{"@type":"ImageObject","url":"https://srida.ai/assets/icons/icon-512.png","width":512,"height":512},"slogan":"ผู้นำด้าน Local AI ในประเทศไทย","description":"Srida.ai ติดตั้ง AI ที่รันบนเครื่องหรือเซิร์ฟเวอร์ขององค์กร ครบ 5 ด้าน: LLM ถอดเสียง แปลงข้อความเป็นเสียง แปลภาษา และอ่านภาพ (OCR) สำหรับงานภาษาไทย","areaServed":{"@type":"Country","name":"Thailand"},"knowsLanguage":["th","en"]},{"@type":"WebSite","@id":"https://srida.ai/#website","name":"Srida.ai","url":"https://srida.ai/","inLanguage":"th","publisher":{"@id":"https://srida.ai/#org"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Local AI คืออะไร ต่างจาก AI บนคลาวด์อย่างไร","acceptedAnswer":{"@type":"Answer","text":"Local AI คือ AI ที่ติดตั้งให้ประมวลผลบนเครื่องหรือเซิร์ฟเวอร์ของคุณเอง ส่วน AI บนคลาวด์จะส่งข้อมูลไปประมวลผลบนเซิร์ฟเวอร์ของผู้ให้บริการแล้วส่งผลกลับมา อ่านต่อได้ใน Local AI คืออะไร"}},{"@type":"Question","name":"ข้อมูลขององค์กรจะถูกส่งออกไปข้างนอกไหม","acceptedAnswer":{"@type":"Answer","text":"ไม่ต้องส่ง พอระบบรันบนเครื่องขององค์กร ข้อความ ไฟล์เสียง และเอกสารก็ประมวลผลอยู่ในเครื่องนั้น ไม่ต้องส่งไปยังผู้ให้บริการ AI ภายนอก อินเทอร์เน็ตใช้แค่ตอนติดตั้งหรืออัปเดตระบบ"}},{"@type":"Question","name":"ต้องใช้เครื่องสเปกแค่ไหน","acceptedAnswer":{"@type":"Answer","text":"ขึ้นกับงานและจำนวนคนที่ใช้พร้อมกัน งานเล็กใช้คอมพิวเตอร์ทั่วไปได้ ส่วนงานที่ใช้กันหลายคนพร้อมกันควรใช้เครื่องที่มีการ์ดจอ เล่าโจทย์มาก่อน แล้วเราจะดูให้ว่าเครื่องที่มีอยู่พอไหม"}},{"@type":"Question","name":"ใช้ภาษาไทยได้ดีแค่ไหน","acceptedAnswer":{"@type":"Answer","text":"ผลลัพธ์ขึ้นกับงานและข้อมูลของแต่ละองค์กร เราเลยไม่อยากให้ตัวเลขลอย ๆ แต่จะเอาระบบมาลองกับตัวอย่างข้อมูลจริงของคุณก่อน ดูผลด้วยกัน แล้วค่อยตัดสินใจ"}},{"@type":"Question","name":"ใช้งานแบบไม่มีอินเทอร์เน็ตได้ไหม","acceptedAnswer":{"@type":"Answer","text":"ได้ พอติดตั้งเสร็จแล้ว ระบบทำงานในเครือข่ายภายในหรือบนเครื่องที่ไม่ได้ต่ออินเทอร์เน็ตได้เลย"}},{"@type":"Question","name":"Local AI ช่วยเรื่อง PDPA ได้อย่างไร","acceptedAnswer":{"@type":"Answer","text":"การประมวลผลในองค์กรช่วยลดการส่งข้อมูลส่วนบุคคลไปยังผู้ให้บริการภายนอกหรือไปต่างประเทศ ซึ่ง พ.ร.บ.คุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562 กำหนดเงื่อนไขไว้ แต่ไม่ได้ทำให้องค์กรปฏิบัติตามกฎหมายครบโดยอัตโนมัติ ยังต้องมีมาตรการอื่น เช่น การควบคุมสิทธิ์เข้าถึง ควรวางแผนร่วมกับเจ้าหน้าที่คุ้มครองข้อมูลส่วนบุคคล (DPO) ขององค์กร"}},{"@type":"Question","name":"ค่าใช้จ่ายประมาณเท่าไร","acceptedAnswer":{"@type":"Answer","text":"ขึ้นกับลักษณะงาน จำนวนคนใช้ และเครื่องที่ต้องใช้ ตอนนี้เรายังไม่ประกาศราคากลาง เล่าโจทย์ให้ทีมงานฟังก่อน แล้วเราจะประเมินให้เป็นรายกรณี ดูแพ็กเกจได้ที่หน้าราคาและแพ็กเกจ"}},{"@type":"Question","name":"ถ้าสนใจ เริ่มจากตรงไหนดี","acceptedAnswer":{"@type":"Answer","text":"เริ่มจากเช็กความเสี่ยงขององค์กรก่อนก็ได้ ไม่ถึงนาทีก็เสร็จ หรืออ่านคู่มือ วางระบบ AI ในองค์กร แล้วค่อยเล่าโจทย์ให้ทีมงานฟัง"}}]}]}</script>
 </head>
 <body>
 <a class="skip" href="#main">ข้ามไปเนื้อหา</a>
 <header class="bar" id="bar">
   <div class="wrap">
-    <a class="brand" href="/"><img src="/assets/logo-224.webp" srcset="/assets/logo-112.webp 112w, /assets/logo-224.webp 224w, /assets/logo-336.webp 336w" sizes="112px" alt="Srida.ai" width="112" height="30"></a>
-    <nav class="nav" id="nav" aria-label="เมนูหลัก"><ul><li><a href="/#products">AI 5 ด้าน</a></li><li><a href="/#risks">ความเสี่ยง</a></li><li><a href="/#risk-check">เช็กความเสี่ยง</a></li><li><a href="/pricing/">ราคา</a></li><li><a href="/blog/">บทความ</a></li><li><a href="/products/">ร้านค้า</a></li></ul></nav>
-    <a class="btn btn--s bar-cta" href="/#contact">ติดต่อทีมงาน</a>
+    <a class="brand" href="/"><img class="logo-l" src="/assets/logo-224.webp" srcset="/assets/logo-112.webp 112w, /assets/logo-224.webp 224w, /assets/logo-336.webp 336w" sizes="112px" alt="Srida.ai" width="112" height="30" loading="lazy"><img class="logo-d" src="/assets/logo-on-dark-280.webp" srcset="/assets/logo-on-dark-140.webp 140w, /assets/logo-on-dark-280.webp 280w, /assets/logo-on-dark-420.webp 420w" sizes="112px" alt="Srida.ai" width="112" height="30" loading="lazy"></a>
+    <nav class="nav" id="nav" aria-label="เมนูหลัก"><ul><li><a href="/#products">AI 5 ด้าน</a></li><li><a href="/#risks">ความเสี่ยง</a></li><li><a href="/#risk-check">เช็กความเสี่ยง</a></li><li><a href="/pricing/">ราคา</a></li><li><a href="/blog/">บทความ</a></li><li><a href="/products/">ร้านค้า</a></li></ul><fieldset class="theme-set" id="theme-set"><legend>ธีมสี</legend><div class="theme-seg"><label><input type="radio" name="theme" value="auto" checked><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#t-a"/></svg><span>ตามเครื่อง</span><svg class="i ok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#t-k"/></svg></label><label><input type="radio" name="theme" value="light"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#t-l"/></svg><span>สว่าง</span><svg class="i ok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#t-k"/></svg></label><label><input type="radio" name="theme" value="dark"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#t-d"/></svg><span>มืด</span><svg class="i ok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#t-k"/></svg></label></div></fieldset></nav>
+    <button class="theme-btn" type="button" aria-expanded="false" aria-controls="theme-set" aria-label="ธีมสี: ตามเครื่อง"><svg class="i ti-a" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#t-a"/></svg><svg class="i ti-l" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#t-l"/></svg><svg class="i ti-d" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#t-d"/></svg></button><a class="btn btn--s bar-cta" href="/#contact">ติดต่อทีมงาน</a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="เปิดเมนู"><span></span><span></span></button>
   </div>
-</header>
+</header><svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="t-a" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="12" rx="2.2"/><path d="M8.5 20h7M12 16.5V20"/></symbol><symbol id="t-l" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.7"/><path d="M12 2.8v2.1M12 19.1v2.1M2.8 12h2.1M19.1 12h2.1M5.5 5.5L7 7M17 17l1.5 1.5M5.5 18.5L7 17M17 7l1.5-1.5"/></symbol><symbol id="t-d" viewBox="0 0 24 24"><path d="M20.2 14.3A8.2 8.2 0 0 1 9.7 3.8a7.3 7.3 0 1 0 10.5 10.5z"/></symbol><symbol id="t-k" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol></defs></svg>
 <main id="main">
 
 <div class="slab slab--dawn slab--top">
