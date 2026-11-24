@@ -1273,8 +1273,6 @@ tbody th{font-weight:600}
   .risk-ico{grid-row:1;width:40px;height:40px;border-radius:13px}
   .risk-what p{grid-column:1 / -1}
   .q{grid-template-columns:1fr;padding:14px}
-  .yn{justify-self:start}
-  .yn span{min-width:84px;min-height:44px}
 }
 
 /* ---------- smaller screens: the parts added for the night-and-day world ---------- */
@@ -1408,9 +1406,10 @@ tbody th{font-weight:600}
   .steps4 li{padding:16px 14px 18px}
 }
 @container page (max-width:640px){
-  .q{grid-template-columns:minmax(0,1fr) 112px;align-items:center;padding:10px 10px 10px 14px}
-  .q .yn{grid-template-columns:1fr;border-radius:18px}
-  .q .yn label span{min-height:38px}
+  .q{grid-template-columns:minmax(0,1fr);gap:12px;padding:15px;border:1px solid var(--line)}
+  .q .yn{grid-template-columns:1fr 1fr;gap:10px;padding:0;background:none;box-shadow:none;border-radius:0}
+  .q .yn label span{min-height:48px;border-radius:14px;border:1.5px solid var(--ink-3);background:var(--card);color:var(--ink);font-size:1rem}
+  .q .yn input:checked + span,.q .yn label:first-child input:checked + span,.q .yn label:last-child input:checked + span{background:var(--btn-bg);color:var(--btn-fg);border-color:transparent}
 }
 .bento{margin-top:clamp(24px,3.2cqi,44px)}
 .sec-head + *,.sec-top + *{margin-top:clamp(22px,3.2cqi,40px)}
